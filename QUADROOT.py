@@ -1,0 +1,5 @@
+a = int(input())
+b = int(input())
+c = int(input())
+print((-b+((b*b)-(4*a*c))**(0.5))/(2*a))
+print((-b-((b*b)-(4*a*c))**(0.5))/(2*a))
