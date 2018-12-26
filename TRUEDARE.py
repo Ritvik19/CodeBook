@@ -1,0 +1,10 @@
+for t in range(int(input())):
+    ntr = int(input())
+    tr = set(list(map(int, input().split())))
+    ndr = int(input())
+    dr = set(list(map(int, input().split())))
+    nts = int(input())
+    ts = set(list(map(int, input().split())))
+    nds = int(input())
+    ds = set(list(map(int, input().split())))
+    print('yes') if ts-tr == set() and ds-dr == set() else print('no')
