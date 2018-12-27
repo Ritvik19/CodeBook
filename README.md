@@ -1,2 +1,2 @@
-# CodeChef_Easy
-Solutions to the easy problems on codechef in python
+# CodeChef_Practice
+Solutions to the practice problems on codechef in python
