@@ -6,9 +6,9 @@ for t in range(int(input())):
         marks.append([int(e) for e in input().split()])
     total = []
     for i in range(n-1):
-        total.append(reduce(lambda x, y: x+y, marks[i]))
+        total.append(sum(marks[i]))
     total = list(reversed(sorted(total)))
-    sergey = reduce(lambda x, y: x+y, marks[-1])
+    sergey = sum(marks[-1])
     diff = total[k-1] - sergey + 1
     if diff <= 0:
         print(0)
