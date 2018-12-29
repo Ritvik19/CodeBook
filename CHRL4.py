@@ -13,8 +13,7 @@ class Graph():
                       for row in range(vertices)]
 
     def printSolution(self, dist):
-        print ("Vertex tDistance from Source")
-        print(dist[self.V-1])
+        return dist[self.V-1]
 
     # A utility function to find the vertex with
     # minimum distance value, from the set of vertices
@@ -61,8 +60,10 @@ class Graph():
                 if self.graph[u][v] > 0 and sptSet[v] == False and dist[v] > dist[u] + self.graph[u][v]:
                         dist[v] = dist[u] + self.graph[u][v]
 
-        self.printSolution(dist)
+        return self.printSolution(dist)
 
+
+from math import log2
 
 n, k = map(int, input().split())
 V = list(map(int, input().split()))
@@ -71,11 +72,12 @@ for i in range(n):
     E.append([0]*n)
     for j in range(i+1, n):
         if V[j] - V[i] <= k:
-            E[i][j] = V[i]*V[j]
+            E[i][j] = log2(V[j])
 print(E)
 
 # Driver program
 g  = Graph(n)
-g.graph = E;
+g.graph = E
 
-g.dijkstra(0);
+solution = g.dijkstra(0) + log2(V[0])
+print(round(2**solution))
