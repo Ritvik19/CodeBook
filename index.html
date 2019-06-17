@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">  -->
+    <title>CodeChef | Ritvik Rastogi</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.1.0/octicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
+    <link rel="stylesheet" href="css/master.css">
+
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron z-depth-3">
+        <div class="text">
+          <h1 class="display-4">Hello, world! I'M RITVIK RASTOGI</h1>
+          <p class="lead">I have been writing code since 2016, and taught myself a handful of skills and programming languages. I love working with python, doing frontend development and solving problems. <br> I created this website to provide solutions of CodeChef problems that I've solved so far...</p>
+        </div>
+        <hr class="my-4">
+        <!-- <div align="center"> -->
+          <div class="input-group">
+              <input type="text" class="form-control" placeholder="Problem Code" id="pc" aria-label="Recipient's username" aria-describedby="basic-addon2">
+              <button type="button" class="btn btn-danger" onclick="loadSolution()">Search Solution</button>
+          </div>
+        <!-- </div> -->
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="soln z-depth-3">
+        <button class="copy-button btn" data-clipboard-action="copy" data-clipboard-target="#solution" id="cpy-btn"  onclick="snackbarDisplay()"><ion-icon name="clipboard"></ion-icon></button>
+        <pre id="solution"></pre>
+      </div>
+      <br><br>
+      <div id="snackbar">Code copied!!!</div>
+    </div>
+
+    <div class="container">
+      <div class="footer z-depth-3">
+        <h4>&lt;&gt; by <a href="https://ritvikrastogi19.surge.sh">Ritvik Rastogi</a></h4>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/ionicons@4.2.2/dist/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="javascript/Main.js" charset="utf-8"></script>
+  </body>
+</html>
