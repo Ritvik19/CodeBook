@@ -1,3 +1,38 @@
-*{
+*, h1, h2, h3, h4, h5, h6{
   font-family: 'Share Tech Mono', monospace;
+  color: #fff;
+}
+/* color codes
+#7baa4e #4082b2 #e04b32 #f4bf25 #df843b */
+body{
+  background-color: #0b0c0e;
+}
+/* label color */
+.input-field label {
+   color: #fff;
+}
+/* label focus color */
+.input-field input[type=text]:focus + label {
+  color: #4082b2 !important;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus {
+  border-bottom: 1px solid #4082b2 !important;
+  box-shadow: 0 1px 0 0 #4082b2 !important;
+}
+.btn-search{
+  background-color: #2196f3;
+}
+.btn-search:hover{
+  background-color: #64b5f6;
+}
+.page-footer{
+  background-color: #42a5f5 !important;
+}
+.soln{
+  background-color: #90caf9 !important;
+  padding: 5% !important;
+}
+.w3-display-topright{
+  padding: 0.8% !important;
 }
