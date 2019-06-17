@@ -9,7 +9,7 @@ body{
 }
 /* label color */
 .input-field label {
-   color: #000;
+   color: #1a237e;
 }
 /* label focus color */
 .input-field input[type=text]:focus + label {
@@ -27,7 +27,7 @@ body{
   background-color: #64b5f6;
 }
 .page-footer{
-  background-color: #0d47a1 !important;
+  background-color: rgba(0, 0, 0, 0) !important;
   margin: auto;
   max-width: 84%;
 }
@@ -43,10 +43,16 @@ body{
 header{
   margin: auto;
   max-width: 84%;
+  padding: 5%;
 }
 
 header h1{
   font-size: 500%;
+}
+
+#cpy-btn, #clr-btn{
+  background-color: rgba(0, 0, 0, 0);
+  border-width: 0px;
 }
 
 /* The snackbar - position it at the bottom and in the middle of the screen */
