@@ -1,4 +1,4 @@
-document.getElementById("code").innerHTML = "Your code appears here"
+document.getElementById("code").innerHTML = "Get your code served here"
 document.getElementById("code-btn").disabled = true;
 var clipboard = new ClipboardJS('.copy-button');
 
@@ -28,7 +28,7 @@ function loadCode()
      document.getElementById("code-btn").disabled = false;
     }
     else{
-      document.getElementById("code").innerHTML = 'Not Found';
+      document.getElementById("code").innerHTML = 'Ingredients for this recepie are not on the shelf';
       document.getElementById("code-btn").disabled = true;
     }
   };

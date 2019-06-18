@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">  -->
-    <title>Cooked Code</title>
+    <title>Codeine</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -19,8 +19,9 @@
   </head>
   <body>
     <header>
-      <h1>Cooked Code</h1>
-      <p>Solutions to codechef practice problems coded in python</p>
+      <h1>Codeine</h1>
+      <h4>A cuisine full of delicious code</h4>
+      <p>Providing you the most efficient recepies of the dishes asked by codechef</p>
       <div class="container">
         <form>
           <div class="row">
@@ -40,18 +41,16 @@
     <br><br>
     <div class="soln w3-display-container z-depth-4">
       <div class="w3-display-topright">
-        <button class="copy-button" data-clipboard-action="copy" data-clipboard-target="#code" id="cpy-btn"  onclick="snackbarDisplay()"><i class="material-icons">content_copy</i></button>
-        <button id="code-btn" onclick="loadDoc()"><i class="material-icons">code</i></div></button>
+        <button class="copy-button tooltip" data-clipboard-action="copy" data-clipboard-target="#code" id="cpy-btn"  onclick="snackbarDisplay()"><span class="tooltiptext">Dine In</span><i class="material-icons">content_copy</i></button>
+        <button class="tooltip" id="code-btn" onclick="loadDoc()"><span class="tooltiptext">Take Away</span><i class="material-icons">code</i></div></button>
         <!-- <button id="clr-btn" onclick="clearCode()"><i class="material-icons">clear_all</i></div></button> -->
-      <pre id="code">
-        your code appears here
-      </pre>
+      <pre id="code"></pre>
     </div>
     <div id="snackbar">Code copied!!!</div>
 
     <br><br>
     <footer class="page-footer">
-      <h5> &lt;&gt; by <a href="https://ritvik19.github.io">Ritvik Rastogi</a> </h5>
+      <h5> <i class="material-icons">restaurant_menu</i> by <a href="https://ritvik19.github.io">Ritvik Rastogi</a> </h5>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
