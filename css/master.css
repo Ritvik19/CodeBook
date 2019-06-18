@@ -50,7 +50,7 @@ header h1{
   font-size: 500%;
 }
 
-#cpy-btn, #clr-btn{
+#cpy-btn, #code-btn{
   background-color: rgba(0, 0, 0, 0);
   border-width: 0px;
 }

@@ -1,8 +1,9 @@
 document.getElementById("code").innerHTML = "Your code appears here"
-
+document.getElementById("code-btn").disabled = true;
 var clipboard = new ClipboardJS('.copy-button');
 
-function snackbarDisplay() {
+function snackbarDisplay()
+{
   // Get the snackbar DIV
   var x = document.getElementById("snackbar");
 
@@ -17,12 +18,18 @@ function snackbarDisplay() {
 //   document.getElementById('code').innerHTML = '';
 // }
 
-function loadCode(){
+function loadCode()
+{
   var xhttp = new XMLHttpRequest();
   var filepath = '../programs/'+document.getElementById('problem').value+'.py'
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
      document.getElementById("code").innerHTML = this.responseText;
+     document.getElementById("code-btn").disabled = false;
+    }
+    else{
+      document.getElementById("code").innerHTML = 'Not Found';
+      document.getElementById("code-btn").disabled = true;
     }
   };
   xhttp.open("GET", filepath, true);
