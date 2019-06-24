@@ -53,7 +53,7 @@ header h1{
 #code{
   overflow-x: scroll;
 }
-#cpy-btn, #code-btn{
+#cpy-btn, #code-btn, #prob-btn{
   background-color: rgba(0, 0, 0, 0);
   border-width: 0px;
 }

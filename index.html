@@ -42,8 +42,9 @@
     <div class="soln w3-display-container z-depth-4">
       <div class="w3-display-topright">
         <button class="copy-button tooltip" data-clipboard-action="copy" data-clipboard-target="#code" id="cpy-btn"  onclick="snackbarDisplay()"><span class="tooltiptext">Dine In</span><i class="material-icons">content_copy</i></button>
-        <button class="tooltip" id="code-btn" onclick="loadDoc()"><span class="tooltiptext">Take Away</span><i class="material-icons">code</i></div></button>
-        <!-- <button id="clr-btn" onclick="clearCode()"><i class="material-icons">clear_all</i></div></button> -->
+        <button class="tooltip" id="code-btn" onclick="loadDoc()"><span class="tooltiptext">Take Away</span><i class="material-icons">code</i></button>
+        <a id="prob-link" target="_blank" href="#"><button id="prob-btn" class="tooltip"> <span class="tooltiptext">View Menu</span> <i class="material-icons">subject</i></button></a>
+      </div>
       <pre id="code"></pre>
     </div>
     <div id="snackbar">Code copied!!!</div>
