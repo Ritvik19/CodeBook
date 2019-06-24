@@ -9,11 +9,24 @@ function snackbarDisplay()
   setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
 }
 
+function readRadio()
+{
+  var radio_btns = document.getElementsByClassName('with-gap');
+  for(i=0; i<radio_btns.length; i++)
+  {
+    if(radio_btns[i].checked)
+    {
+      return i
+    }
+  }
+}
 
 function loadCode()
 {
   var xhttp = new XMLHttpRequest();
   filename = document.getElementById('problem').value
+  var site = readRadio();
+  console.log(site)
   var filepath = '../programs/'+filename+'.py'
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
