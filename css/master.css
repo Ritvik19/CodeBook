@@ -1,14 +1,14 @@
 :root{
-  --c1: #FFEBDC;
-  --c2: #FEAB6D;
-  --c3: #FC7307;
-  --c4: #9D4502;
-  --c5: #341C09;
+  --c1: #282828;
+  --c2: #141414;
+  --c3: #4caf50;
+  --c4: #000000;
+  --c5: #ffffff;
 }
 
 *, h1, h2, h3, h4, h5, h6{
   font-family: 'Share Tech Mono', monospace;
-  color: var(--c4);
+  color: var(--c5)
 }
 
 body{
@@ -16,7 +16,7 @@ body{
 }
 /* label color */
 .input-field label {
-   color: var(--c4);
+   color: var(--c3);
 }
 /* label focus color */
 .input-field input[type=text]:focus + label {
@@ -27,8 +27,22 @@ body{
   border-bottom: 1px solid var(--c3) !important;
   box-shadow: 0 1px 0 0 var(--c3) !important;
 }
+/* valid color */
+.input-field input[type=text].valid {
+  border-bottom: 1px solid var(--c3);
+  box-shadow: 0 1px 0 0 var(--c3);
+}
+/* invalid color */
+.input-field input[type=text].invalid {
+  border-bottom: 1px solid var(--c3);
+  box-shadow: 0 1px 0 0 var(--c3);
+}
+/* icon prefix focus color */
+.input-field .prefix.active {
+  color: var(--c3);
+}
 .btn-search{
-  background-color: var(--c4);
+  background-color: var(--c2);
 }
 .btn-search:hover{
   background-color: var(--c3);
@@ -59,10 +73,12 @@ header h1{
 
 #code{
   overflow-x: scroll;
+  color: var(--c3)
 }
 #cpy-btn, #code-btn, #prob-btn{
   background-color: rgba(0, 0, 0, 0);
   border-width: 0px;
+  color: var(--c3)
 }
 
 /* The snackbar - position it at the bottom and in the middle of the screen */
@@ -70,8 +86,8 @@ header h1{
   visibility: hidden; /* Hidden by default. Visible on click */
   min-width: 250px; /* Set a default minimum width */
   margin-left: -125px; /* Divide value of min-width by 2 */
-  background-color: #333; /* Black background color */
-  color: #fff; /* White text color */
+  background-color: var(--c2); /* background color */
+  color: var(--c5); /* text color */
   text-align: center; /* Centered text */
   border-radius: 2px; /* Rounded borders */
   padding: 16px; /* Padding */
@@ -117,14 +133,14 @@ header h1{
 .tooltip {
   position: relative;
   display: inline-block;
-  border-bottom: 1px dotted black;
+  border-bottom: 1px dotted var(--c4);
 }
 
 .tooltip .tooltiptext {
   visibility: hidden;
   width: 120px;
-  background-color: black;
-  color: #fff;
+  background-color: var(--c4);
+  color: var(--c5);
   text-align: center;
   border-radius: 6px;
   padding: 5px 0;
@@ -155,10 +171,10 @@ header h1{
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--c4);
+  background: var(--c3);
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--c4);
+  background: var(--c3);
 }

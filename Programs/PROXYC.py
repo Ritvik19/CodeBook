@@ -8,7 +8,4 @@ for t in range(int(input())):
     for i in range(2, d-2):
         if S[i] == 'A' and (S[i-1] == 'P' or S[i-2] == 'P') and (S[i+1] == 'P' or S[i+2] == 'P'):
             possible_proxies += 1
-    if possible_proxies >= required:
-        print(max(required,0))
-    else:
-        print(-1)
+    print(max(required,0)) if possible_proxies >= required else print(-1)
