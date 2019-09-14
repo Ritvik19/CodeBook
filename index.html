@@ -12,40 +12,53 @@
     <link rel="stylesheet" href="css/master.css">
   </head>
   <body>
-    <header>
-      <h1>Codeine</h1>
-      <h4>A cuisine full of delicious code</h4>
-      <p>Providing you the most efficient recepies of the dishes asked by CodeChef</p>
-      <div class="container">
-        <form>
-          <div class="row">
-            <div class="input-field col s12">
-              <input id="problem" type="text">
-              <label for="problem">Problem Code</label>
-            </div>
-            <div class="col s5"></div>
-            <div class="col s2">
-              <a class="waves-effect waves-light btn btn-search" onclick="loadCode()">Search</a>
-            </div>
-            <div class="col s5"></div>
-          </div>
-        </form>
-      </div>
-    </header>
-    <div class="soln w3-display-container z-depth-4">
-      <div class="w3-display-topright">
-        <button class="copy-button tooltip" data-clipboard-action="copy" data-clipboard-target="#code" id="cpy-btn"  onclick="snackbarDisplay()"><span class="tooltiptext">Dine In</span><i class="material-icons">content_copy</i></button>
-        <button class="tooltip" id="code-btn" onclick="loadDoc()"><span class="tooltiptext">Take Away</span><i class="material-icons">code</i></button>
-        <a id="prob-link" target="_blank" href="#"><button id="prob-btn" class="tooltip"> <span class="tooltiptext">View Menu</span> <i class="material-icons">subject</i></button></a>
-      </div>
-      <pre id="code"></pre>
-    </div>
-    <div id="snackbar">Code copied!!!</div>
+    <div class="w3-content" style="max-width:1400px">
 
-    <br><br>
-    <footer class="page-footer">
-      <h5> <i class="material-icons">restaurant_menu</i> <a href="https://ritvik19.github.io">Ritvik Rastogi</a> </h5>
-    </footer>
+      <!-- Header -->
+      <header class="w3-container w3-center w3-padding-32">
+        <h1><b>MY BLOG</b></h1>
+        <p>Welcome to the blog of <span class="w3-tag">unknown</span></p>
+      </header>
+
+      <!-- Grid -->
+      <div class="w3-row">
+        <!-- Introduction menu -->
+        <div class="w3-col l4">
+          <!-- Posts -->
+          <div class="w3-card w3-margin form">
+            <div class="w3-container w3-padding">
+              <h4>Popular Dishes</h4>
+              <input type="text" id="postInput" onkeyup="listFilter('postInput', 'postlist', 'span')" placeholder="Search for dishes..">
+            </div>
+            <ul class="w3-ul w3-hoverable w3-white" id="postlist">
+              <!-- <li class="w3-padding-8	program platform">
+                <span class="w3-large">Lorem</span><br>
+                <span>Sed mattis nunc</span>
+              </li> -->
+            </ul>
+          </div>
+        <!-- END Introduction Menu -->
+        </div>
+      <!-- Blog entries -->
+      <div class="w3-col l8 s12">
+        <!-- Blog entry -->
+        <div class="w3-card-4 w3-margin w3-white">
+          <div class="w3-container w3-display-container soln">
+            <div class="w3-display-topright">
+              <button class="copy-button tooltip" data-clipboard-action="copy" data-clipboard-target="#code" id="cpy-btn"  onclick="snackbarDisplay()"><span class="tooltiptext">Dine In</span><i class="material-icons">content_copy</i></button>
+              <button class="tooltip" id="code-btn" onclick="loadDoc(p, q)"><span class="tooltiptext">Take Away</span><i class="material-icons">code</i></button>
+            </div>
+            <pre id="code">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</pre>
+          </div>
+        </div>
+        <div id="snackbar">Code copied!!!</div>
+      <!-- END BLOG ENTRIES -->
+      </div>
+      <!-- END GRID -->
+      </div><br>
+      <!-- END w3-content -->
+      </div>
+    <script src="https://unpkg.com/ionicons@4.2.2/dist/ionicons.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" charset="utf-8"></script>
