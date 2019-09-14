@@ -1,15 +1,33 @@
 :root{
-  --c1: #282828;
-  --c2: #141414;
-  --c3: #4caf50;
-  --c4: #000000;
-  --c5: #ffffff;
+  --c1: #002F6C;
+  --c2: #01579B;
+  --c3: #0277BD;
+  --c4: #B3D6EB;
+  --c5: #E5F1F8;
 }
+
+body{
+  background-color: var(--c5);
+}
+
+.form{
+  background-color: var(--c4);
+}
+
+.w3-tag{
+  background-color: var(--c3);
+}
+
+.program{
+  background-color: var(--c5);
+}
+
 #postlist{
-  max-height: 270px;
+  max-height: 300px;
   overflow-y: scroll;
 }
 .soln{
+  background-color: var(--c4);
   padding: 5% !important;
 }
 .w3-display-topright{
@@ -31,7 +49,7 @@
   visibility: hidden; /* Hidden by default. Visible on click */
   min-width: 250px; /* Set a default minimum width */
   margin-left: -125px; /* Divide value of min-width by 2 */
-  background-color: var(--c2); /* background color */
+  background-color: var(--c1); /* background color */
   color: var(--c5); /* text color */
   text-align: center; /* Centered text */
   border-radius: 2px; /* Rounded borders */
@@ -78,13 +96,13 @@
 .tooltip {
   position: relative;
   display: inline-block;
-  border-bottom: 1px dotted var(--c4);
+  border-bottom: 1px dotted var(--c2);
 }
 
 .tooltip .tooltiptext {
   visibility: hidden;
   width: 120px;
-  background-color: var(--c4);
+  background-color: var(--c2);
   color: var(--c5);
   text-align: center;
   border-radius: 6px;
@@ -123,3 +141,30 @@
 ::-webkit-scrollbar-thumb:hover {
   background: var(--c3);
 }
+
+.input-field label {
+   color: var(--c3);
+ }
+ /* label focus color */
+ .input-field input[type=text]:focus + label {
+   color: var(--c3);
+ }
+ /* label underline focus color */
+ .input-field input[type=text]:focus {
+   border-bottom: 1px solid var(--c3) !important;
+   box-shadow: 0 1px 0 0 var(--c3) !important;
+ }
+ /* valid color */
+ .input-field input[type=text].valid {
+   border-bottom: 1px solid var(--c3);
+   box-shadow: 0 1px 0 0 var(--c3);
+ }
+ /* invalid color */
+ .input-field input[type=text].invalid {
+   border-bottom: 1px solid var(--c3);
+   box-shadow: 0 1px 0 0 var(--c3);
+ }
+ /* icon prefix focus color */
+ .input-field .prefix.active {
+   color: var(--c3);
+ }

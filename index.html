@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Codeine</title>
+    <title>Codepy19</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -16,8 +16,8 @@
 
       <!-- Header -->
       <header class="w3-container w3-center w3-padding-32">
-        <h1><b>MY BLOG</b></h1>
-        <p>Welcome to the blog of <span class="w3-tag">unknown</span></p>
+        <h1><b>Codepy19</b></h1>
+        <p>Code Repository for various <span class="w3-tag">Competitive Programming</span> platforms</p>
       </header>
 
       <!-- Grid -->
@@ -27,8 +27,11 @@
           <!-- Posts -->
           <div class="w3-card w3-margin form">
             <div class="w3-container w3-padding">
-              <h4>Popular Dishes</h4>
-              <input type="text" id="postInput" onkeyup="listFilter('postInput', 'postlist', 'span')" placeholder="Search for dishes..">
+              <h4>Popular Challenges</h4>
+              <div class="input-field">
+                <input type="text" id="postInput" onkeyup="listFilter('postInput', 'postlist', 'span')">
+                <label for="postInput">Search for challenge...</label>
+              </div>
             </div>
             <ul class="w3-ul w3-hoverable w3-white" id="postlist">
               <!-- <li class="w3-padding-8	program platform">
@@ -42,13 +45,13 @@
       <!-- Blog entries -->
       <div class="w3-col l8 s12">
         <!-- Blog entry -->
-        <div class="w3-card-4 w3-margin w3-white">
+        <div class="w3-card-4 w3-margin">
           <div class="w3-container w3-display-container soln">
             <div class="w3-display-topright">
-              <button class="copy-button tooltip" data-clipboard-action="copy" data-clipboard-target="#code" id="cpy-btn"  onclick="snackbarDisplay()"><span class="tooltiptext">Dine In</span><i class="material-icons">content_copy</i></button>
-              <button class="tooltip" id="code-btn" onclick="loadDoc(p, q)"><span class="tooltiptext">Take Away</span><i class="material-icons">code</i></button>
+              <button class="copy-button tooltip" data-clipboard-action="copy" data-clipboard-target="#code" id="cpy-btn"  onclick="snackbarDisplay()"><span class="tooltiptext">Copy</span><i class="material-icons">content_copy</i></button>
+              <button class="tooltip" id="code-btn" onclick="loadDoc(p, q)"><span class="tooltiptext">Download</span><i class="material-icons">file_download</i></button>
             </div>
-            <pre id="code">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</pre>
+            <pre id="code"></pre>
           </div>
         </div>
         <div id="snackbar">Code copied!!!</div>

@@ -1,4 +1,4 @@
-document.getElementById("code").innerHTML = "Get your code served here"
+document.getElementById("code").innerHTML = "Get your code here"
 document.getElementById("code-btn").disabled = true;
 var clipboard = new ClipboardJS('.copy-button');
 
@@ -20,7 +20,7 @@ function loadPrograms() {
       HTMLcontent = ''
       while(typeof program_name[i] !== "undefined")
       {
-        HTMLcontent += '<li class="w3-padding-8 program '+platform[i]+'"><a href="/?q='+program_name[i]+'&p='+platform[i]+'"><span class="w3-large">'+program_name[i]+'</span><br><span>'+platform[i]+'</span></a></li>'
+        HTMLcontent += '<li class="w3-padding-8 w3-hover-blue program '+platform[i]+'"><a href="/?q='+program_name[i]+'&p='+platform[i]+'"><span class="w3-large">'+program_name[i]+'</span><br><span>'+platform[i]+'</span></a></li>'
         i ++;
       }
       document.getElementById("postlist").innerHTML += HTMLcontent;
@@ -59,7 +59,7 @@ function loadCode(p, q)
      document.getElementById("prob-btn").disabled = false;
     }
     else{
-      document.getElementById("code").innerHTML = 'Ingredients for this recepie are not on the shelf';
+      document.getElementById("code").innerHTML = 'Get your code here';
       document.getElementById("code-btn").disabled = true;
       document.getElementById("prob-btn").disabled = true;
     }
