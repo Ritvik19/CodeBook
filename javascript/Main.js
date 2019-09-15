@@ -76,4 +76,4 @@ loadPrograms();
 var params = new URLSearchParams(location.search);
 var q = params.get('q')
 var p = params.get('p')
-loadCode(p,q)
+if(p != null && q != null) loadCode(p,q)

@@ -6,12 +6,24 @@
   --c5: #E5F1F8;
 }
 
-body{
-  background-color: var(--c5);
+*, h1, h2, h3, h4, h5, h6{
+  font-family: 'Righteous', cursive;
+}
+pre{
+  font-family: 'Roboto Mono', monospace;
 }
 
-.form{
+body{
+  background-color: var(--c5);
+  /* width: 100vw !important; */
+}
+
+.form, .head{
   background-color: var(--c4);
+}
+
+.tags{
+  background-color: var(--c5);
 }
 
 .w3-tag{
@@ -22,8 +34,12 @@ body{
   background-color: var(--c5);
 }
 
+footer{
+  background-color: var(--c2);
+}
+
 #postlist{
-  max-height: 300px;
+  max-height: 480px;
   overflow-y: scroll;
 }
 .soln{
@@ -37,7 +53,7 @@ body{
   overflow-x: scroll;
   overflow-y: scroll;
   color: var(--c3);
-  height: 270px;
+  height: 360px;
 }
 #cpy-btn, #code-btn, #prob-btn{
   background-color: rgba(0, 0, 0, 0);
