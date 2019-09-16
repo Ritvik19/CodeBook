@@ -20,7 +20,7 @@ function loadPrograms() {
       HTMLcontent = ''
       while(typeof program_name[i] !== "undefined")
       {
-        HTMLcontent += '<li class="w3-padding-8 w3-hover-blue program '+platform[i]+'"><a href="/?q='+program_name[i]+'&p='+platform[i]+'"><span class="w3-large">'+program_name[i]+'</span><br><span>'+platform[i]+'</span></a></li>'
+        HTMLcontent += '<a href="/?q='+program_name[i]+'&p='+platform[i]+'"><li class="w3-padding-8 w3-hover-blue program '+platform[i]+'"><span class="w3-large">'+program_name[i]+'</span><br><span>'+platform[i]+'</span></li></a>'
         i ++;
       }
       document.getElementById("postlist").innerHTML += HTMLcontent;
