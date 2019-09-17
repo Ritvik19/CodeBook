@@ -13,9 +13,10 @@ for folderName, subfolders, filenames in os.walk('data/HackerRank-Python//'):
 
 programList = pd.DataFrame({
     'Program': codechef+hackerrank_python,
-    'Category': ['CodeChef']*len(codechef)+['HackerRank-Python']*len(hackerrank_python)
+    'Category': ['CodeChef']*len(codechef)+['HackerRank-Python']*len(hackerrank_python),
+    'Language': ['py']*(len(codechef)+len(hackerrank_python))
 }).sort_values('Program').reset_index(drop=True)
 print(len(programList))
-programList.to_json('../ProgramList.json')
+programList.to_json('data/ProgramList.json')
 
 os.system('surge')

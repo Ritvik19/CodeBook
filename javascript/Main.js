@@ -16,11 +16,13 @@ function loadPrograms() {
       var dataObj = JSON.parse(this.responseText);
       program_name = dataObj['Program']
       platform = dataObj['Category']
+      extension = dataObj['Language']
       var i =0;
       HTMLcontent = ''
       while(typeof program_name[i] !== "undefined")
       {
-        HTMLcontent += '<a href="/?q='+program_name[i]+'&p='+platform[i]+'"><li class="w3-padding-8 w3-hover-blue program '+platform[i]+'"><span class="w3-large">'+program_name[i]+'</span><br><span>'+platform[i]+'</span></li></a>'
+        // loadCode(\''+platform[i]+'\', \''+program_name[i]+'\', \''+extension[i]+'\')
+        HTMLcontent += '<li class="w3-padding-8 w3-hover-blue program" onclick="loadCode(\''+platform[i]+'\', \''+program_name[i]+'\', \''+extension[i]+'\')"><span class="w3-large">'+program_name[i]+'</span><br><span>'+platform[i]+'</span></li>'
         i ++;
       }
       document.getElementById("postlist").innerHTML += HTMLcontent;
@@ -47,10 +49,10 @@ function listFilter(inputEl, listEl, element) {
     }
 }
 
-function loadCode(p, q)
+function loadCode(p, q, e)
 {
   var xhttp = new XMLHttpRequest();
-  var filepath = '../data/'+p+'/'+q+'.py'
+  var filepath = '../data/'+p+'/'+q+'.'+e
   console.log(filepath)
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
@@ -68,12 +70,8 @@ function loadCode(p, q)
   xhttp.send();
 }
 
-function loadDoc(p, q){
-  window.open('../data/'+p+'/'+q+'.py')
+function loadDoc(p, q, e){
+  window.open('../data/'+p+'/'+q+'.'+e)
 }
 
 loadPrograms();
-var params = new URLSearchParams(location.search);
-var q = params.get('q')
-var p = params.get('p')
-if(p != null && q != null) loadCode(p,q)
