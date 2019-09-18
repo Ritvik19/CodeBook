@@ -56,14 +56,17 @@ function loadCode(p, q, e)
   console.log(filepath)
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-     document.getElementById("code").innerHTML = this.responseText;
+     code = this.responseText;
+     code = code.replace(/</g,"&lt;")
+     code = code.replace(/>/g,"&gt;")
+     document.getElementById("code").innerHTML = code;
      document.getElementById("code-btn").disabled = false;
-     document.getElementById("prob-btn").disabled = false;
+     // document.getElementById("prob-btn").disabled = false;
     }
     else{
       document.getElementById("code").innerHTML = 'Get your code here';
       document.getElementById("code-btn").disabled = true;
-      document.getElementById("prob-btn").disabled = true;
+      // document.getElementById("prob-btn").disabled = true;
     }
   };
   xhttp.open("GET", filepath, true);
