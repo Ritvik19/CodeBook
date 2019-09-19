@@ -42,6 +42,11 @@ footer{
   max-height: 480px;
   overflow-y: scroll;
 }
+
+#postlist li{
+  cursor: pointer;
+}
+
 .soln{
   background-color: var(--c4);
   padding: 5% !important;
