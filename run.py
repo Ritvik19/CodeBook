@@ -25,10 +25,16 @@ for folderName, subfolders, filenames in os.walk('data/HackerRank-Statistics//')
         hackerrank_stats.append(filename[:-3])
 print('HackerRank-Statistics', len(hackerrank_stats))
 
+hackerrank_code = []
+for folderName, subfolders, filenames in os.walk('data/HackerRank-Code//'):
+    for filename in filenames:
+        hackerrank_code.append(filename[:-3])
+print('HackerRank-Code', len(hackerrank_code))
+
 programList = pd.DataFrame({
-    'Program': codechef+hackerrank_python+hackerrank_js+hackerrank_stats,
-    'Category': ['CodeChef']*len(codechef)+['HackerRank-Python']*len(hackerrank_python)+['HackerRank-JS']*len(hackerrank_js)+['HackerRank-Statistics']*len(hackerrank_stats),
-    'Language': ['py']*(len(codechef)+len(hackerrank_python))+['js']*len(hackerrank_js)+['py']*(len(hackerrank_stats))
+    'Program': codechef+hackerrank_python+hackerrank_js+hackerrank_stats+hackerrank_code,
+    'Category': ['CodeChef']*len(codechef)+['HackerRank-Python']*len(hackerrank_python)+['HackerRank-JS']*len(hackerrank_js)+['HackerRank-Statistics']*len(hackerrank_stats)+['HackerRank-Code']*len(hackerrank_code),
+    'Language': ['py']*(len(codechef)+len(hackerrank_python))+['js']*len(hackerrank_js)+['py']*(len(hackerrank_stats)+len(hackerrank_code))
 }).sort_values('Program').reset_index(drop=True)
 print(len(programList))
 programList.to_json('data/ProgramList.json')
