@@ -49,7 +49,7 @@ footer{
 
 .soln{
   background-color: var(--c4);
-  padding: 5% !important;
+  padding-top: 10% !important;
 }
 .w3-display-topright{
   padding: 0.8% !important;
@@ -59,6 +59,7 @@ footer{
   overflow-y: scroll;
   color: var(--c3);
   height: 360px;
+  background-color: var(--c5);
 }
 #cpy-btn, #code-btn, #prob-btn{
   background-color: rgba(0, 0, 0, 0);
