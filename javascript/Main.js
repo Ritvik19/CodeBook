@@ -22,7 +22,7 @@ function loadPrograms() {
       while(typeof program_name[i] !== "undefined")
       {
         // loadCode(\''+platform[i]+'\', \''+program_name[i]+'\', \''+extension[i]+'\')
-        HTMLcontent += '<li class="w3-padding-8 w3-hover-blue program" onclick="loadCode(\''+platform[i]+'\', \''+program_name[i]+'\', \''+extension[i]+'\')"><span class="w3-large">'+program_name[i]+'</span><br><span>'+platform[i]+'</span></li>'
+        HTMLcontent += '<li class="w3-padding-8 program" onclick="loadCode(\''+platform[i]+'\', \''+program_name[i]+'\', \''+extension[i]+'\')"><span class="w3-large">'+program_name[i]+'</span><br><span>'+platform[i]+'</span></li>'
         i ++;
       }
       document.getElementById("postlist").innerHTML += HTMLcontent;
