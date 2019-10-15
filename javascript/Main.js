@@ -21,7 +21,6 @@ function loadPrograms() {
       HTMLcontent = ''
       while(typeof program_name[i] !== "undefined")
       {
-        // loadCode(\''+platform[i]+'\', \''+program_name[i]+'\', \''+extension[i]+'\')
         HTMLcontent += '<li class="w3-padding-8 program" onclick="loadCode(\''+platform[i]+'\', \''+program_name[i]+'\', \''+extension[i]+'\')"><span class="w3-large">'+program_name[i]+'</span><br><span>'+platform[i]+'</span></li>'
         i ++;
       }
@@ -61,6 +60,7 @@ function loadCode(p, q, e)
      code = code.replace(/>/g,"&gt;")
      document.getElementById("code").innerHTML = code;
      document.getElementById("code-btn").disabled = false;
+     document.getElementById("code-btn").setAttribute(onclick, 'loadDoc('+p+', '+q+', '+e+')');
      // document.getElementById("prob-btn").disabled = false;
     }
     else{
