@@ -60,7 +60,7 @@ function loadCode(p, q, e)
      code = code.replace(/>/g,"&gt;")
      document.getElementById("code").innerHTML = code;
      document.getElementById("code-btn").disabled = false;
-     document.getElementById("code-btn").setAttribute(onclick, 'loadDoc('+p+', '+q+', '+e+')');
+     document.getElementById("code-btn").setAttribute('onclick', "loadDoc('"+p+"', '"+q+"', '"+e+"')");
      // document.getElementById("prob-btn").disabled = false;
     }
     else{
@@ -74,6 +74,7 @@ function loadCode(p, q, e)
 }
 
 function loadDoc(p, q, e){
+  console.log(p+q+e)
   window.open('../data/'+p+'/'+q+'.'+e)
 }
 
