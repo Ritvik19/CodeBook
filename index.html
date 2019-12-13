@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,77 +12,80 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet">
     <link href="css/master.css" rel="stylesheet">
-  </head>
-  <body>
-    <div class="w3-content" style="max-width:1400px">
-      <!-- Header -->
-      <header class="w3-container w3-center w3-padding-32">
-        <h1><b>Codepy19</b></h1>
-        <p>Code Repository for various <span class="w3-tag">Competitive Programming</span> platforms</p>
-      </header>
+</head>
 
-      <!-- Grid -->
-      <div class="w3-row">
-        <!-- Introduction menu -->
-        <div class="w3-col l4">
-          <!-- Posts -->
-          <div class="w3-card w3-margin form">
-            <div class="w3-container w3-padding">
-              <h4>Popular Challenges</h4>
-              <div class="input-field">
-                <input type="text" id="postInput" onkeyup="listFilter('postInput', 'postlist', 'span')">
-                <label for="postInput">Search for challenge...</label>
-              </div>
-            </div>
-            <ul class="w3-ul w3-hoverable w3-white" id="postlist">
-              <!-- <li class="w3-padding-8	program platform">
+<body>
+    <div class="w3-content" style="max-width:1400px">
+        <!-- Header -->
+        <header class="w3-container w3-center w3-padding-32">
+            <h1><b>Codepy19</b></h1>
+            <p>Code Repository for various <span class="w3-tag">Competitive Programming</span> platforms</p>
+        </header>
+
+        <!-- Grid -->
+        <div class="w3-row">
+            <!-- Introduction menu -->
+            <div class="w3-col l4">
+                <!-- Posts -->
+                <div class="w3-card w3-margin form">
+                    <div class="w3-container w3-padding">
+                        <h4>Popular Challenges<span class="badge">1</span></h4>
+                        <div class="input-field">
+                            <input type="text" id="postInput" onkeyup="listFilter('postInput', 'postlist', 'span')">
+                            <label for="postInput">Search for challenge...</label>
+                        </div>
+                    </div>
+                    <ul class="w3-ul w3-hoverable w3-white" id="postlist">
+                        <!-- <li class="w3-padding-8	program platform">
                 <span class="w3-large">Lorem</span><br>
                 <span>Sed mattis nunc</span>
               </li> -->
-            </ul>
-          </div>
-        <!-- END Introduction Menu -->
-        </div>
-      <!-- Blog entries -->
-      <div class="w3-col l8 s12">
-        <!-- Blog entry -->
-        <div class="w3-card-4 w3-margin">
-          <div class="w3-container w3-display-container soln">
-            <div class="w3-display-topright">
-              <button class="copy-button tooltip" data-clipboard-action="copy" data-clipboard-target="#code" id="cpy-btn"  onclick="snackbarDisplay()"><span class="tooltiptext">Copy</span><i class="material-icons">content_copy</i></button>
-              <button class="tooltip" id="code-btn"><span class="tooltiptext">Download</span><i class="material-icons">file_download</i></button>
+                    </ul>
+                </div>
+                <!-- END Introduction Menu -->
             </div>
-            <pre id="code" class="w3-padding"></pre>
-          </div>
-        </div>
-        <div id="snackbar">Code copied!!!</div>
-        <div class="w3-card-4 w3-margin head">
-          <div class="w3-container w3-padding">
-            <h4>Platforms</h4>
-          </div>
-          <div class="w3-container w3-padding tags">
-            <span class="w3-tag w3-margin w3-padding-small">CodeChef</span>
-            <span class="w3-tag w3-margin w3-padding-small">Project Euler</span>
-            <span class="w3-tag w3-margin w3-padding-small">HackerRank-Problem Solving</span>
-            <span class="w3-tag w3-margin w3-padding-small">HackerRank-Python</span>
-            <span class="w3-tag w3-margin w3-padding-small">HackerRank-10 Days of Javascript</span>
-            <span class="w3-tag w3-margin w3-padding-small">HackerRank-10 Days of Statistics</span>
-            <span class="w3-tag w3-margin w3-padding-small">HackerRank-30 Days of Code</span>
-          </div>
-      </div>
-      <!-- END BLOG ENTRIES -->
-      </div>
-      <!-- END GRID -->
-      </div><br>
-      <footer class="w3-container w3-padding-32 w3-text-white">
-        <h4><b>&lt;/&gt;</b> by <a href="https://ritvik19.github.io" target="_blank">Ritvik Rastogi</a></h4>
-      </footer>
-      <!-- END w3-content -->
-      </div>
+            <!-- Blog entries -->
+            <div class="w3-col l8 s12">
+                <!-- Blog entry -->
+                <div class="w3-card-4 w3-margin">
+                    <div class="w3-container w3-display-container soln">
+                        <div class="w3-display-topright">
+                            <button class="copy-button tooltip" data-clipboard-action="copy" data-clipboard-target="#code" id="cpy-btn" onclick="snackbarDisplay()"><span class="tooltiptext">Copy</span><i class="material-icons">content_copy</i></button>
+                            <button class="tooltip" id="code-btn"><span class="tooltiptext">Download</span><i class="material-icons">file_download</i></button>
+                        </div>
+                        <pre id="code" class="w3-padding"></pre>
+                    </div>
+                </div>
+                <div id="snackbar">Code copied!!!</div>
+                <div class="w3-card-4 w3-margin head">
+                    <div class="w3-container w3-padding">
+                        <h4>Platforms</h4>
+                    </div>
+                    <div class="w3-container w3-padding tags">
+                        <span class="w3-tag w3-margin w3-padding-small">CodeChef</span>
+                        <span class="w3-tag w3-margin w3-padding-small">Project Euler</span>
+                        <span class="w3-tag w3-margin w3-padding-small">HackerRank-Problem Solving</span>
+                        <span class="w3-tag w3-margin w3-padding-small">HackerRank-Python</span>
+                        <span class="w3-tag w3-margin w3-padding-small">HackerRank-SQL</span>
+                        <span class="w3-tag w3-margin w3-padding-small">HackerRank-10 Days of Javascript</span>
+                        <span class="w3-tag w3-margin w3-padding-small">HackerRank-10 Days of Statistics</span>
+                        <span class="w3-tag w3-margin w3-padding-small">HackerRank-30 Days of Code</span>
+                    </div>
+                </div>
+                <!-- END BLOG ENTRIES -->
+            </div>
+            <!-- END GRID -->
+        </div><br>
+        <footer class="w3-container w3-padding-32 w3-text-white">
+            <h4><b>&lt;/&gt;</b> by <a href="https://ritvik19.github.io" target="_blank">Ritvik Rastogi</a></h4>
+        </footer>
+        <!-- END w3-content -->
+    </div>
     <script src="https://unpkg.com/ionicons@4.2.2/dist/ionicons.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" charset="utf-8"></script>
     <script src="javascript/main.js" charset="utf-8"></script>
-  </body>
+</body>
+
 </html>
