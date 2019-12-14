@@ -3,7 +3,7 @@ import os
 
 programList = []
 
-for folderName, subfolders, filenames in os.walk('E:/Coding/Codepy/data/'):
+for folderName, subfolders, filenames in os.walk('E:/Coding/CodeBook/data/'):
     for filename in filenames:
         *fname, extension = filename.split('.')
         fname = '.'.join(fname)
