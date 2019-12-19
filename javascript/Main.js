@@ -48,6 +48,7 @@ function listFilter(inputEl, listEl, element) {
 }
 
 function loadCode(p, q, e) {
+    document.getElementById('post-title').innerHTML = q + " - " + p;
     var xhttp = new XMLHttpRequest();
     var filepath = '../data/' + p + '/' + q + '.' + e
     console.log(filepath)
@@ -56,6 +57,7 @@ function loadCode(p, q, e) {
             code = this.responseText;
             code = code.replace(/</g, "&lt;")
             code = code.replace(/>/g, "&gt;")
+            document.getElementById('share').href = "https://codebook19.surge.sh/?p=" + encodeURIComponent(p) + "&q=" + encodeURIComponent(q) + "&e=" + encodeURIComponent(e);
             document.getElementById("code").innerHTML = code;
             document.getElementById("code-btn").disabled = false;
             document.getElementById("code-btn").setAttribute('onclick', "loadDoc('" + p + "', '" + q + "', '" + e + "')");
@@ -76,3 +78,11 @@ function loadDoc(p, q, e) {
 }
 
 loadPrograms();
+
+var params = new URLSearchParams(location.search);
+var p = params.get('p')
+var q = params.get('q')
+var e = params.get('e')
+if (p != null && q != null && e != null) {
+    loadCode(p, q, e);
+}

@@ -49,7 +49,9 @@
                         <div class="w3-display-topright">
                             <button class="copy-button tooltip" data-clipboard-action="copy" data-clipboard-target="#code" id="cpy-btn" onclick="snackbarDisplay()"><span class="tooltiptext">Copy</span><i class="material-icons">content_copy</i></button>
                             <button class="tooltip" id="code-btn"><span class="tooltiptext">Download</span><i class="material-icons">file_download</i></button>
+                            <a id="share" target="_blank" href=""><button class="tooltip"> <span class="tooltiptext">WhatsApp</span><i class="material-icons">share</i></button></a>
                         </div>
+                        <h2 id="post-title" class="w3-center"></h2>
                         <pre id="code" class="w3-padding"></pre>
                     </div>
                 </div>
@@ -58,16 +60,16 @@
                     <div class="w3-container w3-padding">
                         <h4>Platforms</h4>
                     </div>
-                    <div class="w3-container w3-padding tags">
-                        <span class="w3-tag w3-margin w3-padding-small">CodeChef</span>
-                        <span class="w3-tag w3-margin w3-padding-small">Project Euler</span>
-                        <span class="w3-tag w3-margin w3-padding-small">HackerRank-Problem Solving</span>
-                        <span class="w3-tag w3-margin w3-padding-small">HackerRank-Python</span>
-                        <span class="w3-tag w3-margin w3-padding-small">HackerRank-SQL</span>
-                        <span class="w3-tag w3-margin w3-padding-small">HackerRank-C</span>
-                        <span class="w3-tag w3-margin w3-padding-small">HackerRank-10 Days of Javascript</span>
-                        <span class="w3-tag w3-margin w3-padding-small">HackerRank-10 Days of Statistics</span>
-                        <span class="w3-tag w3-margin w3-padding-small">HackerRank-30 Days of Code</span>
+                    <div class="w3-container tags w3-padding">
+                        <span class="w3-tag w3-padding-small">CodeChef</span>
+                        <span class="w3-tag w3-padding-small">Project Euler</span>
+                        <span class="w3-tag w3-padding-small">HackerRank-Problem Solving</span>
+                        <span class="w3-tag w3-padding-small">HackerRank-Python</span>
+                        <span class="w3-tag w3-padding-small">HackerRank-SQL</span>
+                        <span class="w3-tag w3-padding-small">HackerRank-C</span>
+                        <span class="w3-tag w3-padding-small">HackerRank-10 Days of Javascript</span>
+                        <span class="w3-tag w3-padding-small">HackerRank-10 Days of Statistics</span>
+                        <span class="w3-tag w3-padding-small">HackerRank-30 Days of Code</span>
                     </div>
                 </div>
                 <!-- END BLOG ENTRIES -->
@@ -79,7 +81,7 @@
         </footer>
         <!-- END w3-content -->
     </div>
-    <script src="https://unpkg.com/ionicons@4.2.2/dist/ionicons.js"></script>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" charset="utf-8"></script>
