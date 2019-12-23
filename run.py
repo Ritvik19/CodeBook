@@ -1,5 +1,5 @@
 import pandas as pd
-import os
+import os, sys
 
 programList = []
 
@@ -16,7 +16,7 @@ print(len(programList))
 programList.to_json('data/ProgramList.json')
 print(programList['Category'].value_counts())
 os.system('surge')
-c = int(input())
+c = sys.argv[1]
 os.system('git add .')
-os.system('git commit -m "Commit {c}"')
+os.system(f'git commit -m "Commit {c}"')
 os.system('git push origin master')
