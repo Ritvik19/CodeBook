@@ -19,6 +19,10 @@
     color: #ffffff !important;
 }
 
+.tags .badge {
+    background-color: var(--c1);
+}
+
 *,
 h1,
 h2,
