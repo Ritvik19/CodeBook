@@ -20,7 +20,8 @@
 }
 
 .tags .badge {
-    background-color: var(--c1);
+    background-color: whitesmoke;
+    color: var(--c3) !important;
 }
 
 *,

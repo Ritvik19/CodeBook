@@ -48,7 +48,7 @@ function listFilter(inputEl, listEl, element) {
 }
 
 function loadCode(p, q, e) {
-    document.getElementById('post-title').innerHTML = q + " - " + p;
+    document.getElementById('post-title').innerHTML = q + "." + e + " - " + p;
     var xhttp = new XMLHttpRequest();
     var filepath = '../data/' + p + '/' + q + '.' + e
     console.log(filepath)
@@ -57,15 +57,13 @@ function loadCode(p, q, e) {
             code = this.responseText;
             code = code.replace(/</g, "&lt;")
             code = code.replace(/>/g, "&gt;")
-            document.getElementById('share').href = "https://codebook19.surge.sh/?p=" + encodeURIComponent(p) + "&q=" + encodeURIComponent(q) + "&e=" + encodeURIComponent(e);
+            document.getElementById('share').href = "/?p=" + encodeURIComponent(p) + "&q=" + encodeURIComponent(q) + "&e=" + encodeURIComponent(e);
             document.getElementById("code").innerHTML = code;
             document.getElementById("code-btn").disabled = false;
             document.getElementById("code-btn").setAttribute('onclick', "loadDoc('" + p + "', '" + q + "', '" + e + "')");
-            // document.getElementById("prob-btn").disabled = false;
         } else {
             document.getElementById("code").innerHTML = 'Get your code here';
             document.getElementById("code-btn").disabled = true;
-            // document.getElementById("prob-btn").disabled = true;
         }
     };
     xhttp.open("GET", filepath, true);
@@ -77,15 +75,6 @@ function loadDoc(p, q, e) {
     window.open('../data/' + p + '/' + q + '.' + e)
 }
 
-loadPrograms();
-
-var params = new URLSearchParams(location.search);
-var p = params.get('p')
-var q = params.get('q')
-var e = params.get('e')
-if (p != null && q != null && e != null) {
-    loadCode(p, q, e);
-}
 
 function loadCounts() {
     var xhttp = new XMLHttpRequest();
@@ -104,4 +93,13 @@ function loadCounts() {
     xhttp.send();
 }
 
-loadCounts()
+loadCounts();
+loadPrograms();
+
+var params = new URLSearchParams(location.search);
+var p = params.get('p')
+var q = params.get('q')
+var e = params.get('e')
+if (p != null && q != null && e != null) {
+    loadCode(p, q, e);
+}
