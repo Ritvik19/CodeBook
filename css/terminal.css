@@ -1,0 +1,30 @@
+:root {
+    --c1: #011627;
+    --c2: #183446;
+    --c3: #FB8B24;
+    --c4: #10202C;
+    --c5: #142939;
+}
+
+* {
+    font-family: 'Anonymous Pro', monospace;
+}
+
+* {
+    font-size: 1.5vw;
+}
+
+#counts {
+    width: 65%;
+}
+
+body {
+    background-color: var(--c1);
+    color: #ffffff;
+}
+
+input {
+    background-color: var(--c1);
+    border: none;
+    color: #fff;
+}
