@@ -28,3 +28,7 @@ input {
     border: none;
     color: #fff;
 }
+
+::-webkit-scrollbar {
+    display: none;
+}
