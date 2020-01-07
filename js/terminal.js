@@ -19,6 +19,8 @@ $('#command').keyup(function(e) {
         } else if (command == 'download') {
             window.open('../data/' + P + '/' + Q + '.' + E)
             $('#terminal')[0].innerHTML += '<br>downloaded'
+        } else if (command == 'exit') {
+            window.open('/', '_self')
         } else {
             $('#terminal')[0].innerHTML += '<br>command not found'
         }

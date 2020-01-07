@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code Book 19</title>
     <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro&display=swap" rel="stylesheet">
@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <div class="w3-padding-large">
+    <div class="container w3-padding-large">
         <header>
             <pre>
    _____          _        ____              _      __  ___  
@@ -22,18 +22,36 @@
  | |     ___   __| | ___  | |_) | ___   ___ | | __  | | (_) |
  | |    / _ \ / _` |/ _ \ |  _ < / _ \ / _ \| |/ /  | |\__, |
  | |___| (_) | (_| |  __/ | |_) | (_) | (_) |   <   | |  / / 
-  \_____\___/ \__,_|\___| |____/ \___/ \___/|_|\_\  |_| /_/                                                                                                                                                                             
-            </pre> ---------------------------------------------------------------------------
-            <br> Code Repository for various Competitive Programming platforms
-            <br> ---------------------------------------------------------------------------
+  \_____\___/ \__,_|\___| |____/ \___/ \___/|_|\_\  |_| /_/ 
+            </pre>
+            <hr>
+            <h3>Code Repository for various Competitive Programming platforms</h3>
+            <hr>
+            <span>
+                Options:
+            </span>
+            <table>
+                <tr>
+                    <td>copy</td>
+                    <td>copies the code to clip board</td>
+                </tr>
+                <tr>
+                    <td>download</td>
+                    <td>downloads the code file</td>
+                </tr>
+                <tr>
+                    <td>exit</td>
+                    <td>exit the terminal</td>
+                </tr>
+            </table>
+            <hr>
         </header>
         <div id="terminal">
             <div id="title"></div>
-            ---------------------------------------------------------------------------
-            <pre id="code"></pre>
+            <hr>
+            <pre id="code" class="w3-padding"></pre>
         </div>
-        ---------------------------------------------------------------------------
-        <br>$ <input type="text" id="command">
+        <hr>$ <input type="text" id="command" autofocus>
     </div>
 
 
