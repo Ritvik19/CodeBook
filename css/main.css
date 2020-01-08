@@ -1,0 +1,62 @@
+*,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Righteous', cursive;
+    color: white;
+}
+
+body {
+    background-color: var(--c5);
+}
+
+.w3-tag {
+    background-color: var(--c3);
+    margin: 8px;
+}
+
+#postlist {
+    overflow-y: scroll;
+    height: 320px;
+}
+
+#postlist li {
+    cursor: pointer;
+}
+
+#postlist li:hover {
+    background-color: var(--c2);
+}
+
+.w3-card {
+    width: 80%;
+    margin: auto;
+}
+
+input {
+    width: 100%;
+    background-color: var(--c2);
+    color: var(--c3);
+    border: none;
+}
+
+::placeholder {
+    color: #ffffff
+}
+
+input:focus {
+    outline: none;
+}
+
+.badge {
+    background-color: var(--c3);
+    color: #ffffff !important;
+}
+
+.tags .badge {
+    background-color: whitesmoke;
+    color: var(--c3) !important;
+}

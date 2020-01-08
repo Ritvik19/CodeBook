@@ -1,40 +1,3 @@
-:root {
-    --c1: #011627;
-    --c2: #183446;
-    --c3: #FB8B24;
-    --c4: #10202C;
-    --c5: #142939;
-}
-
-*,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: 'Anonymous Pro', monospace;
-}
-
-* {
-    font-size: 1.5vw;
-}
-
-body {
-    background-color: var(--c1);
-    color: #ffffff;
-}
-
-table {
-    width: 100%;
-}
-
-.container {
-    width: 80%;
-    margin: 10%;
-    background-color: var(--c5);
-}
-
 #code {
     overflow-x: auto;
 }
@@ -43,37 +6,13 @@ input {
     background-color: inherit;
     border: none;
     color: #fff;
+    width: 98%;
 }
 
 input:focus {
     outline: none;
 }
 
-::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
-}
-
-::-webkit-scrollbar-track {
-    background: var(--c2);
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--c3);
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: var(--c3);
-}
-
-hr {
-    border-top: 2px dashed #ffffff
-}
-
-.highlight {
-    color: var(--c3);
-}
-
-hr.highlight {
-    border-top: 2px dashed var(--c3)
+* {
+    font-size: 1.5vw;
 }

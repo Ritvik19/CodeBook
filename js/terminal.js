@@ -1,4 +1,4 @@
-function CopyToClipboard(containerid) {
+function copyToClipboard(containerid) {
     var el = document.getElementById(containerid);
     var range = document.createRange();
     range.selectNodeContents(el);
@@ -9,18 +9,32 @@ function CopyToClipboard(containerid) {
     return false;
 }
 
+function copyStringToClipboard(str) {
+    var el = document.createElement('textarea');
+    el.value = str;
+    el.setAttribute('readonly', '');
+    el.style = { position: 'absolute', left: '-9999px' };
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
+}
+
 $('#command').keyup(function(e) {
     if (e.keyCode === 13) {
-        command = this.value
+        command = this.value.toLowerCase();
         $('#terminal')[0].innerHTML += '<br>$ ' + command
         if (command == 'copy') {
-            CopyToClipboard('code')
-            $('#terminal')[0].innerHTML += '<br>copied'
+            copyToClipboard('code')
+            $('#terminal')[0].innerHTML += '<br>code copied'
         } else if (command == 'download') {
             window.open('../data/' + P + '/' + Q + '.' + E)
             $('#terminal')[0].innerHTML += '<br>downloaded'
         } else if (command == 'exit') {
             window.open('/', '_self')
+        } else if (command == 'share') {
+            copyStringToClipboard(window.location.href);
+            $('#terminal')[0].innerHTML += '<br>URL copied to clipboard'
         } else {
             $('#terminal')[0].innerHTML += '<br>command not found'
         }
@@ -29,7 +43,7 @@ $('#command').keyup(function(e) {
 });
 
 function loadCode(p, q, e) {
-    document.getElementById('title').innerHTML = q + "." + e + " - " + p;
+    document.getElementById('title').innerHTML = p + "." + e + " - " + q;
     var xhttp = new XMLHttpRequest();
     var filepath = '../data/' + p + '/' + q + '.' + e
     console.log(filepath)
@@ -47,9 +61,9 @@ function loadCode(p, q, e) {
 
 
 var params = new URLSearchParams(location.search);
-var P = params.get('p')
-var Q = params.get('q')
-var E = params.get('e')
+var P = decodeURIComponent(params.get('p'))
+var Q = decodeURIComponent(params.get('q'))
+var E = decodeURIComponent(params.get('e'))
 if (P != null && Q != null && E != null) {
     loadCode(P, Q, E);
 }

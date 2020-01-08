@@ -1,0 +1,325 @@
+/* :root{
+  --c1: #002F6C;
+  --c2: #01579B;
+  --c3: #0277BD;
+  --c4: #B3D6EB;
+  --c5: #E5F1F8;
+} */
+
+:root {
+    --c1: #011627;
+    --c2: #183446;
+    --c3: #FB8B24;
+    --c4: #10202C;
+    --c5: #142939;
+}
+
+.badge {
+    background-color: var(--c3);
+    color: #ffffff !important;
+}
+
+.tags .badge {
+    background-color: whitesmoke;
+    color: var(--c3) !important;
+}
+
+*,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Righteous', cursive;
+    color: white;
+}
+
+#post-title {
+    margin: 0px !important;
+}
+
+pre {
+    font-family: 'Roboto Mono', monospace;
+}
+
+.program:hover {
+    background-color: var(--c1) !important;
+}
+
+body {
+    background-color: var(--c5);
+    /* width: 100vw !important; */
+}
+
+.tooltiptext {
+    color: var(--c3) !important;
+}
+
+.form,
+.head {
+    background-color: var(--c4);
+}
+
+.tags {
+    background-color: var(--c5);
+}
+
+.w3-tag {
+    background-color: var(--c3);
+}
+
+.tags .w3-tag {
+    margin: 8px;
+}
+
+.program {
+    background-color: var(--c5);
+}
+
+footer {
+    background-color: var(--c2);
+}
+
+footer a:hover {
+    color: var(--c3);
+}
+
+@media only screen and (min-width: 600px) {
+    #postlist {
+        max-height: 640px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #postlist {
+        max-height: 360px;
+    }
+}
+
+#postlist {
+    overflow-y: scroll;
+}
+
+#postlist li {
+    cursor: pointer;
+}
+
+.soln {
+    background-color: var(--c4);
+    padding-top: 10% !important;
+}
+
+.w3-display-topright {
+    padding: 0.8% !important;
+}
+
+#code {
+    overflow-x: scroll;
+    overflow-y: scroll;
+    color: var(--c3);
+    height: 360px;
+    background-color: var(--c5);
+}
+
+.w3-display-topright .tooltip {
+    background-color: rgba(0, 0, 0, 0);
+    border-width: 0px;
+    color: var(--c3)
+}
+
+
+/* The snackbar - position it at the bottom and in the middle of the screen */
+
+#snackbar {
+    visibility: hidden;
+    /* Hidden by default. Visible on click */
+    min-width: 250px;
+    /* Set a default minimum width */
+    margin-left: -125px;
+    /* Divide value of min-width by 2 */
+    background-color: var(--c2);
+    /* background color */
+    color: var(--c3);
+    /* text color */
+    text-align: center;
+    /* Centered text */
+    border-radius: 2px;
+    /* Rounded borders */
+    padding: 16px;
+    /* Padding */
+    position: fixed;
+    /* Sit on top of the screen */
+    z-index: 1;
+    /* Add a z-index if needed */
+    left: 50%;
+    /* Center the snackbar */
+    bottom: 30px;
+    /* 30px from the bottom */
+}
+
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+
+#snackbar.show {
+    visibility: visible;
+    /* Show the snackbar */
+    /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+  However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+
+/* Animations to fade the snackbar in and out */
+
+@-webkit-keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+
+/* TOOLTIP */
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted var(--c2);
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: var(--c2);
+    color: var(--c5);
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+
+/* SCROLL BAR */
+
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: var(--c2);
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: var(--c3);
+}
+
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--c3);
+}
+
+.input-field label {
+    color: var(--c3);
+}
+
+
+/* label focus color */
+
+.input-field input[type=text]:focus+label {
+    color: var(--c3) !important;
+}
+
+
+/* label underline focus color */
+
+.input-field input[type=text]:focus {
+    border-bottom: 1px solid var(--c3) !important;
+    box-shadow: 0 1px 0 0 var(--c3) !important;
+}
+
+
+/* valid color */
+
+.input-field input[type=text].valid {
+    border-bottom: 1px solid var(--c3) !important;
+    ;
+    box-shadow: 0 1px 0 0 var(--c3) !important;
+    ;
+}
+
+
+/* invalid color */
+
+.input-field input[type=text].invalid {
+    border-bottom: 1px solid var(--c3) !important;
+    ;
+    box-shadow: 0 1px 0 0 var(--c3) !important;
+    ;
+}
+
+
+/* icon prefix focus color */
+
+.input-field .prefix.active {
+    color: var(--c3) !important;
+    ;
+}

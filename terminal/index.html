@@ -6,15 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code Book 19</title>
-    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet">
+    <link href="../css/master.css" rel="stylesheet">
     <link href="../css/terminal.css" rel="stylesheet">
 </head>
 
 <body>
-    <div class="container w3-padding-large">
+    <div class="container w3-padding-large w3-display-container">
+        <span class="w3-display-topright w3-margin">
+             <a href="/"> <i class="material-icons">clear</i></a>
+        </span>
         <header>
             <pre>
    _____          _        ____              _      __  ___  
@@ -43,6 +46,10 @@
                     <td>exit</td>
                     <td>exit the terminal</td>
                 </tr>
+                <tr>
+                    <td>share</td>
+                    <td>copy the share URL to clip board</td>
+                </tr>
             </table>
             <hr>
         </header>
@@ -51,14 +58,13 @@
             <hr>
             <pre id="code" class="w3-padding"></pre>
         </div>
-        <hr>$ <input type="text" id="command" autofocus>
+        <hr>$<input type="text" class="w3-padding-small" id="command" autofocus>
     </div>
-
-
 
     <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" charset="utf-8"></script>
     <script src="../js/terminal.js" charset="utf-8"></script>
 </body>
+
+</html>
