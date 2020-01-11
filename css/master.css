@@ -18,7 +18,7 @@ pre {
 }
 
 body {
-    background-color: var(--c5);
+    background-color: var(--c1);
     color: #ffffff;
 }
 
@@ -36,7 +36,8 @@ a {
     text-decoration: none;
 }
 
-a:hover {
+a:hover,
+a h5:hover {
     color: var(--c3);
 }
 
@@ -59,4 +60,8 @@ a:hover {
 
 hr {
     border-top: 2px dashed #ffffff
+}
+
+.bg-c4 {
+    background-color: var(--c4);
 }

@@ -9,10 +9,6 @@ h6 {
     color: white;
 }
 
-body {
-    background-color: var(--c5);
-}
-
 .w3-tag {
     background-color: var(--c3);
     margin: 8px;
@@ -34,6 +30,7 @@ body {
 .w3-card {
     width: 80%;
     margin: auto;
+    background-color: var(--c5);
 }
 
 input {

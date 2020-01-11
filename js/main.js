@@ -6,7 +6,7 @@ function loadCounts() {
             dataObj = Object.entries(dataObj)
             HTMLcontent = ''
             for (i = 0; i < dataObj.length; i++) {
-                HTMLcontent += '<span class="w3-tag w3-padding-small">' + dataObj[i][0] + '<span class="badge w3-padding-small w3-margin-left">' + dataObj[i][1] + '</span></span>'
+                HTMLcontent += '<span class="w3-tag w3-padding">' + dataObj[i][0] + '<span class="badge w3-padding-small w3-margin-left">' + dataObj[i][1] + '</span></span>'
             }
             document.getElementsByClassName("tags")[0].innerHTML = HTMLcontent;
         }
