@@ -1,22 +1,3 @@
-function loadCounts() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            var dataObj = JSON.parse(this.responseText);
-            dataObj = Object.entries(dataObj)
-            HTMLcontent = ''
-            for (i = 0; i < dataObj.length; i++) {
-                HTMLcontent += '<span class="w3-tag w3-padding">' + dataObj[i][0] + '<span class="badge w3-padding-small w3-margin-left">' + dataObj[i][1] + '</span></span>'
-            }
-            document.getElementsByClassName("tags")[0].innerHTML = HTMLcontent;
-        }
-    };
-    xhttp.open("GET", "data/ProgramCounts.json", true);
-    xhttp.send();
-}
-
-loadCounts();
-
 function loadPrograms() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {

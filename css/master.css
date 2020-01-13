@@ -37,6 +37,7 @@ a {
 }
 
 a:hover,
+a h1:hover,
 a h5:hover {
     color: var(--c3);
 }

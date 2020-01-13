@@ -57,3 +57,7 @@ input:focus {
     background-color: whitesmoke;
     color: var(--c3) !important;
 }
+
+td {
+    width: 25%;
+}
