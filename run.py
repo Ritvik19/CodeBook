@@ -20,8 +20,8 @@ print(programList['Category'].value_counts())
 programList['Category'].value_counts().to_json('data/ProgramCounts.json')
 print(programList['Language'].value_counts())
 programList['Language'].value_counts().to_json('data/ProgramLanguage.json')
-# os.system('surge')
-# c = sys.argv[1]
-# os.system('git add .')
-# os.system(f'git commit -m "Commit {c}"')
-# os.system('git push origin master')
+os.system('surge')
+c = sys.argv[1]
+os.system('git add .')
+os.system(f'git commit -m "Commit {c}"')
+os.system('git push origin master')
