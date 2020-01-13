@@ -12,12 +12,13 @@ function drawBarChart() {
                     datasets: [{
                         label: 'Problems Solved',
                         data: Object.values(dataObj),
-                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
-                        borderColor: 'rgba(54, 162, 235, 1)',
+                        backgroundColor: '#11174b',
+                        borderColor: '#b3ddcc',
                         borderWidth: 1
                     }]
                 },
                 options: {
+                    responsive: true,
                     legend: {
                         labels: {
                             fontColor: "white",
@@ -25,12 +26,18 @@ function drawBarChart() {
                     },
                     scales: {
                         yAxes: [{
+                            gridLines: {
+                                color: "white"
+                            },
                             ticks: {
                                 fontColor: "white",
                                 beginAtZero: true
                             }
                         }],
                         xAxes: [{
+                            gridLines: {
+                                color: "white"
+                            },
                             ticks: {
                                 fontColor: "white",
                                 beginAtZero: true
