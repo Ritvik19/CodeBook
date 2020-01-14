@@ -16,3 +16,7 @@ input:focus {
 * {
     font-size: 1.5vw;
 }
+
+.container {
+    background-color: var(--c4);
+}
