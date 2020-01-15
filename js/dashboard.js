@@ -92,6 +92,7 @@ function code() {
             var dataObj = JSON.parse(this.responseText);
             console.log(dataObj)
             document.getElementById('loc').innerHTML = dataObj['loc']
+            document.getElementById('num').innerHTML = dataObj['num']
             var ctx1 = document.getElementById('code').getContext('2d');
             var myChart1 = new Chart(ctx1, {
                 type: 'horizontalBar',

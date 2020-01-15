@@ -8,6 +8,7 @@ count_for = 0
 count_while = 0
 count_if = 0
 count_asgnmt = 0
+count_prog = 0
 
 
 for folderName, subfolders, filenames in os.walk('E:/Coding/CodeBook/data/'):
@@ -16,6 +17,7 @@ for folderName, subfolders, filenames in os.walk('E:/Coding/CodeBook/data/'):
         fname = '.'.join(fname)
         dname = folderName.split('/')[-1]
         if extension != 'json':
+            count_prog += 1
             with open(f'{folderName}/{filename}') as f:
                 data = f.read()
                 count_loc += len(data.split('\n'))
@@ -39,7 +41,7 @@ print(programList['Language'].value_counts())
 programList['Language'].value_counts().to_json('data/ProgramLanguage.json')
 
 json.dump(({'loc': count_loc, 'expressions': count_asgnmt, 'for': count_for,
-            'while': count_while, 'decisions': count_if}), open('data/ProgramAnalysis.json', 'w'))
+            'while': count_while, 'decisions': count_if, 'num': count_prog}), open('data/ProgramAnalysis.json', 'w'))
 
 os.system('surge')
 c = sys.argv[1]
