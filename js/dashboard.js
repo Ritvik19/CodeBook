@@ -154,11 +154,75 @@ function code() {
                     scales: {}
                 }
             });
-
-
         }
     };
     xhttp.open("GET", "../data/ProgramAnalysis.json", true);
     xhttp.send();
 }
 code();
+
+function drawHistogram() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var dataObj = JSON.parse(this.responseText);
+            console.log(dataObj)
+            n = Object.keys(dataObj)[Object.keys(dataObj).length - 1]
+            var ctx = document.getElementById("histogram").getContext('2d');
+            var dataValues = [];
+            var dataLabels = [];
+            for (i = 0; i <= n; i++) {
+                dataLabels.push(i * 10)
+                dataValues.push(dataObj[i] || 0)
+            }
+            dataLabels.push((parseInt(n) + 1) * 10)
+            var myChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: dataLabels,
+                    datasets: [{
+                        label: '# Programs',
+                        data: dataValues,
+                        backgroundColor: '#11174b',
+                        borderColor: '#b3ddcc',
+                    }]
+                },
+                options: {
+                    scales: {
+                        xAxes: [{
+                            gridLines: {
+                                color: "white"
+                            },
+                            display: false,
+                            barPercentage: 1.3,
+                            ticks: {
+                                color: "white"
+                            }
+                        }, {
+                            gridLines: {
+                                color: "white"
+                            },
+                            display: true,
+                            ticks: {
+                                autoSkip: false,
+                                // max: 4,
+                            }
+                        }],
+                        yAxes: [{
+                            gridLines: {
+                                color: "white"
+                            },
+                            ticks: {
+                                fontColor: "white",
+                                beginAtZero: true
+                            }
+                        }]
+                    }
+                }
+            });
+        }
+    };
+    xhttp.open("GET", "../data/ProgramHistogram.json", true);
+    xhttp.send();
+}
+drawHistogram();

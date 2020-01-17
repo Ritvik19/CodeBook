@@ -1,6 +1,8 @@
 import pandas as pd
 import os, sys, json
+from collections import defaultdict
 
+histogram = defaultdict(lambda : 0)
 programList = []
 
 count_loc = 0
@@ -20,17 +22,14 @@ for folderName, subfolders, filenames in os.walk('E:/Coding/CodeBook/data/'):
             count_prog += 1
             with open(f'{folderName}/{filename}') as f:
                 data = f.read()
+                histogram[len(data.split('\n'))//10] += 1
                 count_loc += len(data.split('\n'))
                 count_asgnmt += data.count(' = ')
                 count_for += data.count('for')
                 count_while += data.count(('while'))
                 count_if += data.count('if')
                 
-        programList.append((fname, extension, dname))
-programList.pop(0)
-programList.pop(0)
-programList.pop(0)
-programList.pop(0)
+            programList.append((fname, extension, dname))
 
 programList = pd.DataFrame(programList, columns=['Program', 'Language', 'Category']).sort_values('Program').reset_index(drop=True)
 print(len(programList))
@@ -42,7 +41,7 @@ programList['Language'].value_counts().to_json('data/ProgramLanguage.json')
 
 json.dump(({'loc': count_loc, 'expressions': count_asgnmt, 'for': count_for,
             'while': count_while, 'decisions': count_if, 'num': count_prog}), open('data/ProgramAnalysis.json', 'w'))
-
+json.dump(histogram, open('data/ProgramHistogram.json', 'w'))
 os.system('surge')
 c = sys.argv[1]
 os.system('git add .')
