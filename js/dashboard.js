@@ -172,10 +172,10 @@ function drawHistogram() {
             var dataValues = [];
             var dataLabels = [];
             for (i = 0; i <= n; i++) {
-                dataLabels.push(i * 10)
+                dataLabels.push(i * 10 + '-' + ((parseInt(i) + 1) * 10))
                 dataValues.push(dataObj[i] || 0)
             }
-            dataLabels.push((parseInt(n) + 1) * 10)
+            dataLabels.push((parseInt(n) + 1) * 10 + '+')
             var myChart = new Chart(ctx, {
                 type: 'bar',
                 data: {
@@ -185,30 +185,27 @@ function drawHistogram() {
                         data: dataValues,
                         backgroundColor: '#11174b',
                         borderColor: '#b3ddcc',
+                        borderWidth: 1
                     }]
                 },
                 options: {
+                    responsive: true,
+                    legend: {
+                        labels: {
+                            fontColor: "white",
+                        }
+                    },
                     scales: {
-                        xAxes: [{
+                        yAxes: [{
                             gridLines: {
                                 color: "white"
                             },
-                            display: false,
-                            barPercentage: 1.3,
                             ticks: {
-                                color: "white"
-                            }
-                        }, {
-                            gridLines: {
-                                color: "white"
-                            },
-                            display: true,
-                            ticks: {
-                                autoSkip: false,
-                                // max: 4,
+                                fontColor: "white",
+                                beginAtZero: true
                             }
                         }],
-                        yAxes: [{
+                        xAxes: [{
                             gridLines: {
                                 color: "white"
                             },
