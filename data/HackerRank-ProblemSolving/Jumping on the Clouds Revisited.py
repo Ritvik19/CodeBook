@@ -6,9 +6,6 @@ import random
 import re
 import sys
 
-# Complete the jumpingOnClouds function below.
-
-
 def jumpingOnClouds(c, k):
     energyConsumed = 0
     i = 0

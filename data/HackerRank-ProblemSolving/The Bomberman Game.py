@@ -7,7 +7,7 @@ import re
 import sys
 
 
-def detonation(grid, n_r, n_c):   # it returns grid as a list of lists
+def detonation(grid, n_r, n_c): 
         grid = [['O' if x == '.' else '.' for x in row] for row in grid]
         for i, row in enumerate(grid):
                 for j, element in enumerate(row):

@@ -6,16 +6,6 @@ import random
 import re
 import sys
 
-#
-# Complete the 'nonDivisibleSubset' function below.
-#
-# The function is expected to return an INTEGER.
-# The function accepts following parameters:
-#  1. INTEGER k
-#  2. INTEGER_ARRAY s
-#
-
-
 def nonDivisibleSubset(k, s):
     counts = [0] * k
     for number in s:

@@ -6,9 +6,6 @@ import random
 import re
 import sys
 
-# Complete the theLoveLetterMystery function below.
-
-
 def theLoveLetterMystery(s):
     out = 0
     for i in range(len(s) // 2):

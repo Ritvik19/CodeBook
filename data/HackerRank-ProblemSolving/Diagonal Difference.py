@@ -1,12 +1,7 @@
 import os
 import sys
 
-#
-# Complete the diagonalDifference function below.
-#
 def diagonalDifference(a):
-    #
-    # Write your code here.
     s1 = s2 = 0
     for i in range(len(a)):
         for j in range(len(a)):
@@ -15,7 +10,6 @@ def diagonalDifference(a):
             if i + j == len(a)-1:
                 s2 += a[i][j]
     return abs(s1-s2)
-    #
 
 if __name__ == '__main__':
     f = open(os.environ['OUTPUT_PATH'], 'w')

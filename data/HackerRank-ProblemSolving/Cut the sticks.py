@@ -7,9 +7,6 @@ import re
 import sys
 from collections import Counter
 
-# Complete the cutTheSticks function below.
-
-
 def cutTheSticks(arr):
     result = list()
     l = len(arr)

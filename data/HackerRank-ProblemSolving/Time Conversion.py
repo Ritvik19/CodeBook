@@ -1,13 +1,7 @@
 import os
 import sys
 
-#
-# Complete the timeConversion function below.
-#
 def timeConversion(s):
-    #
-    # Write your code here.
-    #
     hr, mn, sc = s.split(':')
     if sc[2:] == 'PM':
         hr = int(hr)+12 if hr != '12' else '12'

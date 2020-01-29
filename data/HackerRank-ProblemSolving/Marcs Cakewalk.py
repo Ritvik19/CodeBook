@@ -6,9 +6,6 @@ import random
 import re
 import sys
 
-# Complete the marcsCakewalk function below.
-
-
 def marcsCakewalk(calorie):
     calorie.sort(reverse=True)
     miles = sum([c*2**i for i, c in enumerate(calorie)])

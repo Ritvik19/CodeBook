@@ -6,9 +6,6 @@ import random
 import re
 import sys
 
-# Complete the towerBreakers function below.
-
-
 def towerBreakers(n, m):
     return 2 if m == 1 or n % 2 == 0 else 1
 

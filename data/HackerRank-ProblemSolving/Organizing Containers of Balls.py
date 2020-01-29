@@ -6,7 +6,6 @@ import random
 import re
 import sys
 
-# Complete the organizingContainers function below.
 def organizingContainers(container):
     mr = []
     mc = []

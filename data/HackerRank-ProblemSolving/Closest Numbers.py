@@ -6,9 +6,6 @@ import random
 import re
 import sys
 
-# Complete the closestNumbers function below.
-
-
 def closestNumbers(arr):
     arr.sort()
     smallest = sys.maxsize
@@ -24,7 +21,6 @@ def closestNumbers(arr):
             pairs.append(arr[i-1])
             pairs.append(arr[i])
     return pairs
-
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')

@@ -6,9 +6,6 @@ import random
 import re
 import sys
 
-# Complete the biggerIsGreater function below.
-
-
 def biggerIsGreater(s):
     for i in range(len(s)-1)[::-1]:
         if ord(s[i]) < ord(s[i+1]):
@@ -18,7 +15,6 @@ def biggerIsGreater(s):
                     lis[i], lis[j] = lis[j], lis[i]
                     return ("".join(lis[:i+1]+lis[i+1:][::-1]))
     return "no answer"
-
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')

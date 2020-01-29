@@ -6,9 +6,6 @@ import random
 import re
 import sys
 
-# Complete the angryProfessor function below.
-
-
 def angryProfessor(k, a):
     count = 0
     for _ in a:

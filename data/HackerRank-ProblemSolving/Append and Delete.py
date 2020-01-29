@@ -6,7 +6,6 @@ import random
 import re
 import sys
 
-# Complete the appendAndDelete function below.
 def appendAndDelete(s, t, k):
     commonLength = 0
     for _s, _t in zip(s,t):

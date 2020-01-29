@@ -1,19 +1,14 @@
 MOD = 10 ** 9 + 7
-
-
 def mod(x): return (x % MOD)
-
 
 AND, OR, KLEEN = None, False, True
 A, B, E = True, False, None
-
 
 def generateId():
     x = 0
     while True:
         yield x
         x += 1
-
 
 def parse(s):
     t, op = [()], []
@@ -33,7 +28,6 @@ def parse(s):
         elif i == '*':
             op[-1] = KLEEN
     return t.pop()[0]
-
 
 def nfa(t, g=None):
     global ID
@@ -61,7 +55,6 @@ def nfa(t, g=None):
         g[x] = {t: {y}}
         return g, x, y
 
-
 def eps(x, n):
     d, v = set(), x
     while v:
@@ -71,10 +64,8 @@ def eps(x, n):
             v.update(n.get(x, {}).get(E, set()))
     return d
 
-
 def setuple(x):
     return tuple(sorted(x))
-
 
 def dfa(n, s, e):
     ID = generateId()
@@ -105,20 +96,16 @@ def dfa(n, s, e):
                 d[f[s]].append(x)
     return d, g
 
-
 def mat(x):
     y = len(x)
     return list(map(lambda i: list(map(x[i].count, range(y))), range(y)))
 
-
 def identity(n):
     return list(map(lambda i: list(map(lambda j: int(i == j), range(n))), range(n)))
-
 
 def multiply(a, b):
     n = len(a)
     return list(map(lambda i: list(map(lambda j: mod(sum(map(lambda k: mod(a[i][k] * b[k][j]), range(n)))), range(n))), range(n)))
-
 
 def modpow(x, n):
     y = identity(len(x))
@@ -129,15 +116,12 @@ def modpow(x, n):
         n >>= 1
     return y
 
-
 def valid_sum(a, g):
     return mod(sum(map(a.__getitem__, g)))
-
 
 def solve(s, l):
     d, g = dfa(*nfa(parse(s)))
     return valid_sum(modpow(mat(d), l)[0], g)
-
 
 for _ in range(int(input())):
     ID = generateId()

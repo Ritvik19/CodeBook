@@ -6,7 +6,6 @@ import random
 import re
 import sys
 
-# Complete the cavityMap function below.
 def cavityMap(grid):
     for i in range(1, len(grid)-1):
         for j in range(1, len(grid[0])-1):

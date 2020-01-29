@@ -4,7 +4,6 @@ import random
 import re
 import sys
 
-# Complete the dayOfProgrammer function below.
 def dayOfProgrammer(year):
     if year < 1918:
         if year%4 == 0:

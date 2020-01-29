@@ -6,9 +6,6 @@ import random
 import re
 import sys
 
-# Complete the formingMagicSquare function below.
-
-
 def formingMagicSquare(s):
     diffs = []
     all_possible = [

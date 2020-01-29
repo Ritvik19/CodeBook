@@ -6,7 +6,6 @@ import random
 import re
 import sys
 
-# Complete the workbook function below.
 def workbook(n, k, arr):
     num_special=0
     cur_page=1

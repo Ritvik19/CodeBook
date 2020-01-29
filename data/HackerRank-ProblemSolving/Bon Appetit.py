@@ -4,7 +4,6 @@ import random
 import re
 import sys
 
-# Complete the bonAppetit function below.
 def bonAppetit(bill, k, b):
     b_actual = sum(bill[:k]+bill[k+1:])/2
     if b == b_actual:

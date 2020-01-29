@@ -6,7 +6,6 @@ import random
 import re
 import sys
 
-
 def isModifiedKaprekar(n):
     d = len(str(n))
     s = str(n*n)
@@ -16,9 +15,6 @@ def isModifiedKaprekar(n):
     except:
         l = 0
     return r+l == n
-
-# Complete the kaprekarNumbers function below.
-
 
 def kaprekarNumbers(p, q):
     knum = []

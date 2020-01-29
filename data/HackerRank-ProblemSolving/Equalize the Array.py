@@ -7,8 +7,6 @@ import re
 import sys
 from collections import Counter
 
-
-# Complete the equalizeArray function below.
 def equalizeArray(arr):
     return len(arr) - Counter(arr).most_common(1)[0][1]
 

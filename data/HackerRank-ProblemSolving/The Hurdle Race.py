@@ -6,9 +6,6 @@ import random
 import re
 import sys
 
-# Complete the hurdleRace function below.
-
-
 def hurdleRace(k, height):
     return max(height)-k if max(height) > k else 0
 

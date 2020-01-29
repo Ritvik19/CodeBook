@@ -6,9 +6,6 @@ import random
 import re
 import sys
 
-# Complete the minimumDistances function below.
-
-
 def minimumDistances(a):
     d = []
     for x in a:

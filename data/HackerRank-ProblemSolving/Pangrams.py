@@ -6,9 +6,6 @@ import random
 import re
 import sys
 
-# Complete the pangrams function below.
-
-
 def pangrams(s):
     t = s.lower()
     flag = 0

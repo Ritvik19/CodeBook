@@ -7,9 +7,6 @@ import re
 import sys
 from collections import Counter
 
-# Complete the gameOfThrones function below.
-
-
 def gameOfThrones(s):
     s = Counter(s).values()
     odds = 0

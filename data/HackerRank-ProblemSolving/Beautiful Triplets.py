@@ -6,9 +6,6 @@ import random
 import re
 import sys
 
-# Complete the beautifulTriplets function below.
-
-
 def beautifulTriplets(d, arr):
     gc = 0
     n = len(arr)
@@ -16,7 +13,6 @@ def beautifulTriplets(d, arr):
         if arr[i]+d in arr and arr[i]+2*d in arr:
             gc += 1
     return gc
-
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')

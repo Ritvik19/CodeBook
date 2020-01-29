@@ -1,12 +1,7 @@
 import os
 import sys
 
-#
-# Complete the solve function below.
-#
 def solve(a0, a1, a2, b0, b1, b2):
-    #
-    # Write your code here.
     alice = bob = 0
     if a0 > b0:
         alice += 1
@@ -21,8 +16,6 @@ def solve(a0, a1, a2, b0, b1, b2):
     elif a2 < b2:
         bob += 1
     return(alice, bob)
-
-    #
 
 if __name__ == '__main__':
     f = open(os.environ['OUTPUT_PATH'], 'w')

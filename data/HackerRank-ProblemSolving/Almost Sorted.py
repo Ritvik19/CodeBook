@@ -6,9 +6,6 @@ import random
 import re
 import sys
 
-# Complete the almostSorted function below.
-
-
 def almostSorted(arr):
     n = len(arr)
     if n == 2:

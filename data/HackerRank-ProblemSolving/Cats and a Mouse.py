@@ -6,9 +6,6 @@ import random
 import re
 import sys
 
-# Complete the catAndMouse function below.
-
-
 def catAndMouse(x, y, z):
     da = abs(z-x)
     db = abs(z-y)
@@ -18,7 +15,6 @@ def catAndMouse(x, y, z):
         return 'Cat B'
     else:
         return 'Mouse C'
-
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')

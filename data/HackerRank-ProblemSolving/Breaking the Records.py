@@ -6,7 +6,6 @@ import random
 import re
 import sys
 
-# Complete the breakingRecords function below.
 def breakingRecords(scores):
     best  = scores[0]
     worst = scores[0]

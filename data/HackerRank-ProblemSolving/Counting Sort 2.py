@@ -6,9 +6,6 @@ import random
 import re
 import sys
 
-# Complete the countingSort function below.
-
-
 def countingSort(arr):
     return sorted(arr)
 

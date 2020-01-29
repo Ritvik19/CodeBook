@@ -6,9 +6,6 @@ import random
 import re
 import sys
 
-# Complete the separateNumbers function below.
-
-
 def separateNumbers(s):
     if len(s) == 1:
         print('NO')

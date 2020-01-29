@@ -7,8 +7,6 @@ import re
 import sys
 from collections import Counter
 
-
-# Complete the anagram function below.
 def anagram(s):
     l = len(s)
     if l % 2 == 1:

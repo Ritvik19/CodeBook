@@ -6,9 +6,6 @@ import random
 import re
 import sys
 
-# Complete the findDigits function below.
-
-
 def findDigits(n):
     count = 0
     for _ in str(n):

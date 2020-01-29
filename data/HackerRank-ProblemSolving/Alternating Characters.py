@@ -6,9 +6,6 @@ import random
 import re
 import sys
 
-# Complete the alternatingCharacters function below.
-
-
 def alternatingCharacters(s):
     newstr = s[0]
     count = 0

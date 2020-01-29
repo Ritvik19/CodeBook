@@ -4,7 +4,6 @@ import random
 import re
 import sys
 
-# Complete the migratoryBirds function below.
 def migratoryBirds(arr):
     birdcount = dict()
     for a in arr:

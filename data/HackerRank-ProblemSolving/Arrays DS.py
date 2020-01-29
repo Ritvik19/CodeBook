@@ -6,13 +6,9 @@ import random
 import re
 import sys
 
-# Complete the reverseArray function below.
-
-
 def reverseArray(arr):
     arr.reverse()
     return arr
-
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')

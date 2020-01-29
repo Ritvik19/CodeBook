@@ -6,9 +6,6 @@ import random
 import re
 import sys
 
-# Complete the alternate function below.
-
-
 def validate(cpy):
     for i in range(len(cpy)-1):
         if cpy[i] == cpy[i+1]:

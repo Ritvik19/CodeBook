@@ -6,9 +6,6 @@ import random
 import re
 import sys
 
-# Complete the larrysArray function below.
-
-
 def larrysArray(A):
     return "NO" if sum([1 for i in range(len(A)) for j in range(i+1, len(A)) if A[i] > A[j]]) % 2 else "YES"
 

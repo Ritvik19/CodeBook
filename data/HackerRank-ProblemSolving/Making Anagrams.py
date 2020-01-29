@@ -7,9 +7,6 @@ import re
 import sys
 from collections import Counter
 
-# Complete the makingAnagrams function below.
-
-
 def makingAnagrams(s1, s2):
     s1 = Counter(s1)
     s2 = Counter(s2)

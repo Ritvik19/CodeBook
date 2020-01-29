@@ -6,9 +6,6 @@ import random
 import re
 import sys
 
-# Complete the icecreamParlor function below.
-
-
 def icecreamParlor(m, arr):
     for i in range(len(arr)):
         for j in range(i+1, len(arr)):

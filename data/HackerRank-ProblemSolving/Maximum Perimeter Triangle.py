@@ -6,9 +6,6 @@ import random
 import re
 import sys
 
-# Complete the maximumPerimeterTriangle function below.
-
-
 def maximumPerimeterTriangle(sticks):
     sticks.sort()
     i = len(sticks)-3

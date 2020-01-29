@@ -1,13 +1,7 @@
 import os
 import sys
 
-#
-# Complete the countApplesAndOranges function below.
-#
 def countApplesAndOranges(s, t, a, b, apples, oranges):
-    #
-    # Write your code here.
-    #
     app = org = 0
     for ap in apples:
         if s<= a + ap <= t:

@@ -6,9 +6,6 @@ import random
 import re
 import sys
 
-# Complete the chessboardGame function below.
-
-
 def chessboardGame(x, y):
     x = x % 4
     y = y % 4

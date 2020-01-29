@@ -4,7 +4,6 @@ import random
 import re
 import sys
 
-# Complete the birthday function below.
 def birthday(s, d, m):
     count = 0
     for i in range(len(s)-m+1):

@@ -6,9 +6,9 @@ import random
 import re
 import sys
 
-# Complete the gameOfStones function below.
 def gameOfStones(n):
     return ["First","Second"][n%7 in [0,1]]
+
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
 

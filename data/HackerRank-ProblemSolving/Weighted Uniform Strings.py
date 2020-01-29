@@ -6,9 +6,6 @@ import random
 import re
 import sys
 
-# Complete the weightedUniformStrings function below.
-
-
 def alpha(c):
     return ord(c) - 96
 

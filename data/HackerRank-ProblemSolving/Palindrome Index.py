@@ -6,9 +6,6 @@ import random
 import re
 import sys
 
-# Complete the palindromeIndex function below.
-
-
 def palindromeIndex(s):
     n = len(s)
     for i in range(n//2):
@@ -18,7 +15,6 @@ def palindromeIndex(s):
             else:
                 return i
     return -1
-
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')

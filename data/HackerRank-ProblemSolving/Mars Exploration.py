@@ -6,9 +6,6 @@ import random
 import re
 import sys
 
-# Complete the marsExploration function below.
-
-
 def marsExploration(s):
     count = 0
     for i in range(len(s)):

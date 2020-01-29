@@ -6,9 +6,6 @@ import random
 import re
 import sys
 
-# Complete the stringConstruction function below.
-
-
 def stringConstruction(s):
     return(len(set(s)))
 

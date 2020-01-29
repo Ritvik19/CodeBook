@@ -6,9 +6,6 @@ import random
 import re
 import sys
 
-# Complete the hackerrankInString function below.
-
-
 def hackerrankInString(s):
     p = 0
     for e in 'hackerrank':

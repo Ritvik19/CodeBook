@@ -6,7 +6,6 @@ import random
 import re
 import sys
 
-# Complete the surfaceArea function below.
 def surfaceArea(A):
     area = 0
     neighs = [[-1, 0], [0, 1], [1, 0], [0, -1]]

@@ -6,9 +6,6 @@ import random
 import re
 import sys
 
-# Complete the utopianTree function below.
-
-
 def utopianTree(n):
     height = 1
     for i in range(n):

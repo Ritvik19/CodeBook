@@ -6,9 +6,6 @@ import random
 import re
 import sys
 
-# Complete the minimumNumber function below.
-
-
 def minimumNumber(n, password):
     required = 0
     numbers = re.compile(r"[0-9]")

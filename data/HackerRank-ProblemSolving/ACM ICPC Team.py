@@ -6,9 +6,6 @@ import random
 import re
 import sys
 
-# Complete the acmTeam function below.
-
-
 def add(p1, p2):
     return sum((i or j) for i, j in zip(p1, p2))
 

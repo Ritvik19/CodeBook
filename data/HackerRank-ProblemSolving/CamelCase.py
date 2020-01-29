@@ -6,7 +6,6 @@ import random
 import re
 import sys
 
-# Complete the camelcase function below.
 def camelcase(s):
     count = 1
     for _ in s:

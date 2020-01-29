@@ -6,9 +6,6 @@ import random
 import re
 import sys
 
-# Complete the funnyString function below.
-
-
 def funnyString(s):
     differences = []
     for i in range(1, len(s)):

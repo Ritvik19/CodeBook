@@ -6,9 +6,6 @@ import random
 import re
 import sys
 
-# Complete the quickSort function below.
-
-
 def quickSort(arr):
     p = arr[0]
     left, right = [], []

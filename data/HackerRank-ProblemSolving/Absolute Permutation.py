@@ -6,9 +6,6 @@ import random
 import re
 import sys
 
-# Complete the absolutePermutation function below.
-
-
 def absolutePermutation(n, k):
     if k == 0:
         return range(1, n+1)

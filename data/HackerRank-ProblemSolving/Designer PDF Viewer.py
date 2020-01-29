@@ -6,9 +6,6 @@ import random
 import re
 import sys
 
-# Complete the designerPdfViewer function below.
-
-
 def designerPdfViewer(h, word):
     heights = []
     for w in word:

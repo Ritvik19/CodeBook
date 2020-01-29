@@ -6,9 +6,6 @@ import random
 import re
 import sys
 
-# Complete the viralAdvertising function below.
-
-
 def viralAdvertising(n):
     m = [2]
     for i in range(n-1):

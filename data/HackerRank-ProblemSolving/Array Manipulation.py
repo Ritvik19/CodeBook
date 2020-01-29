@@ -6,9 +6,6 @@ import random
 import re
 import sys
 
-# Complete the arrayManipulation function below.
-
-
 def arrayManipulation(n, queries):
      arr = [0]*n
      for i in queries:

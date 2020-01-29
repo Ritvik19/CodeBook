@@ -6,7 +6,6 @@ import random
 import re
 import sys
 
-# Complete the timeInWords function below.
 ones = "one two three four five six seven eight nine".split(" ")
 
 def num_to_word(x):

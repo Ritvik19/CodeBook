@@ -7,7 +7,6 @@ import re
 import sys
 from functools import reduce
 
-# Complete the gemstones function below.
 def gemstones(arr):
     arr = list(map(set, arr))
     return len(reduce(lambda x, y: x&y, arr))

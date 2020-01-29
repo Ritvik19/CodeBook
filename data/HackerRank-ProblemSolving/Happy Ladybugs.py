@@ -6,7 +6,6 @@ import random
 import re
 import sys
 
-# Complete the happyLadybugs function below.
 def happyLadybugs(b):
     n = len(b)
     for a in set(b):

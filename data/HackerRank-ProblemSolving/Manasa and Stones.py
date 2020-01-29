@@ -6,7 +6,6 @@ import random
 import re
 import sys
 
-# Complete the stones function below.
 def stones(n, a, b):
     n = n - 1
     min_ = min(a, b)

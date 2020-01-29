@@ -6,9 +6,6 @@ import random
 import re
 import sys
 
-# Complete the climbingLeaderboard function below.
-
-
 def climbingLeaderboard(scores, alice):
     unique_scores = list(reversed(sorted(set(scores))))
 
@@ -24,7 +21,6 @@ def climbingLeaderboard(scores, alice):
             j += 1
 
     return reversed(ans)
-
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')

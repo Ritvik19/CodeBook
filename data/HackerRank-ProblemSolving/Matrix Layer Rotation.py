@@ -6,9 +6,6 @@ import random
 import re
 import sys
 
-# Complete the matrixRotation function below.
-
-
 def matrixRotation(matrix, r):
     n = len(matrix)
     m = len(matrix[0])

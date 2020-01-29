@@ -7,9 +7,6 @@ import re
 import sys
 from collections import Counter
 
-# Complete the twoStrings function below.
-
-
 def twoStrings(s1, s2):
     return 'NO' if len(Counter(s1) & Counter(s2)) == 0 else 'YES'
 

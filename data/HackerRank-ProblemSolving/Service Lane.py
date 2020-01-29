@@ -6,9 +6,6 @@ import random
 import re
 import sys
 
-# Complete the serviceLane function below.
-
-
 def serviceLane(n, cases):
     res = []
     for i in range(len(cases)):

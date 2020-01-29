@@ -6,9 +6,6 @@ import random
 import re
 import sys
 
-# Complete the saveThePrisoner function below.
-
-
 def saveThePrisoner(n, m, s):
         a = s+m-1
         if a > n:

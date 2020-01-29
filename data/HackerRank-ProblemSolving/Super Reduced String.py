@@ -6,7 +6,6 @@ import random
 import re
 import sys
 
-# Complete the superReducedString function below.
 def superReducedString(s):
     res = []
     for c in s:

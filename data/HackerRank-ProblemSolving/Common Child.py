@@ -6,9 +6,6 @@ import random
 import re
 import sys
 
-# Complete the commonChild function below.
-
-
 def commonChild(s1, s2):
     l1 = len(s1)
     l2 = len(s2)
@@ -25,7 +22,6 @@ def commonChild(s1, s2):
                 lcs[li1][j+1] = lcs[li][j+1]
 
     return lcs[(i+1) % 2][j+1]
-
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')

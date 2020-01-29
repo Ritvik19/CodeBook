@@ -6,7 +6,6 @@ import random
 import re
 import sys
 
-# Complete the fairRations function below.
 def fairRations(B):
     if sum(B) %2 == 0:
         odds = 0

@@ -1,13 +1,7 @@
 import os
 import sys
 
-#
-# Complete the plusMinus function below.
-#
 def plusMinus(arr):
-    #
-    # Write your code here.
-    #
     neg = pos = zer = 0
     for a in arr:
         if a > 0:

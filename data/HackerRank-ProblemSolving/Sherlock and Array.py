@@ -6,9 +6,6 @@ import random
 import re
 import sys
 
-# Complete the balancedSums function below.
-
-
 def balancedSums(arr):
     s = sum(arr)
     count = 0

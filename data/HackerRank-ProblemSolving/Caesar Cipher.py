@@ -6,9 +6,6 @@ import random
 import re
 import sys
 
-# Complete the caesarCipher function below.
-
-
 def caesarCipher(s, k):
     for i in range(len(s)):
         if 97 <= ord(s[i]) <= 122:
@@ -16,7 +13,6 @@ def caesarCipher(s, k):
         elif 65 <= ord(s[i]) <= 90:
             s = s[:i] + chr(((ord(s[i])-65+k) % 26)+65) + s[i+1:]
     return s
-
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')

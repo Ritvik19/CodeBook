@@ -6,7 +6,6 @@ import random
 import re
 import sys
 
-# Complete the strangeCounter function below.
 def strangeCounter(t):
     rem = 3
     while t > rem:

@@ -4,7 +4,6 @@ import random
 import re
 import sys
 
-# Complete the divisibleSumPairs function below.
 def divisibleSumPairs(n, k, ar):
     count = 0
     for i in range(n):

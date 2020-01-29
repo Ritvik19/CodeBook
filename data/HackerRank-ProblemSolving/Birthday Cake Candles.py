@@ -1,13 +1,7 @@
 import os
 import sys
 
-#
-# Complete the birthdayCakeCandles function below.
-#
 def birthdayCakeCandles(n, ar):
-    #
-    # Write your code here.
-    #
     return ar.count(max(ar))
 
 if __name__ == '__main__':

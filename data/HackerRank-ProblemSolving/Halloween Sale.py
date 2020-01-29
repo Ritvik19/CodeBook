@@ -6,11 +6,7 @@ import random
 import re
 import sys
 
-# Complete the howManyGames function below.
-
-
 def howManyGames(p, d, m, s):
-    # Return the number of games you can buy
     if s < p:
         return 0
     total = p

@@ -6,9 +6,6 @@ import random
 import re
 import sys
 
-# Complete the countingValleys function below.
-
-
 def countingValleys(n, s):
     count = 0
     topography = 0

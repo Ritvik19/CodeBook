@@ -6,9 +6,6 @@ import random
 import re
 import sys
 
-# Complete the runningTime function below.
-
-
 def runningTime(arr):
     z = 0
     if arr == sorted(arr):

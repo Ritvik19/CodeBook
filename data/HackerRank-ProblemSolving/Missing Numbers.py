@@ -6,8 +6,6 @@ import random
 import re
 import sys
 from collections import Counter
-# Complete the missingNumbers function below.
-
 
 def missingNumbers(arr, brr):
     brr = Counter(brr)

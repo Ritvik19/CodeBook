@@ -1,17 +1,11 @@
 import os
 import sys
 
-#
-# Complete the simpleArraySum function below.
-#
 def simpleArraySum(ar):
-    #
-    # Write your code here.
     sum = 0
     for a in ar:
         sum += a
-    return sum
-    #
+    return su
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')

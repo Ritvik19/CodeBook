@@ -1,13 +1,7 @@
 import os
 import sys
 
-#
-# Complete the staircase function below.
-#
 def staircase(n):
-    #
-    # Write your code here.
-    #
     for i in range(n):
         a = []
         for j in range(n-i-1):

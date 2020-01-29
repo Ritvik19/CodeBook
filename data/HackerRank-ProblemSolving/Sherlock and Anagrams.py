@@ -7,9 +7,6 @@ import re
 import sys
 from collections import Counter
 
-# Complete the sherlockAndAnagrams function below.
-
-
 def sherlockAndAnagrams(s):
     count = 0
     for i in range(1, len(s)+1):

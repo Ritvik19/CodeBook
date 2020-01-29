@@ -7,9 +7,6 @@ import re
 import sys
 from collections import Counter
 
-# Complete the isValid function below.
-
-
 def isValid(s):
     freq = [s.count(letter) for letter in set(s)]
     if max(freq)-min(freq) == 0:

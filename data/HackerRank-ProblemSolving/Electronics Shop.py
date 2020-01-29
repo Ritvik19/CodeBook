@@ -1,13 +1,7 @@
 import os
 import sys
 
-#
-# Complete the getMoneySpent function below.
-#
 def getMoneySpent(keyboards, drives, b):
-    #
-    # Write your code here.
-    #
     max_spent = -1
     for k in keyboards:
         for d in drives:

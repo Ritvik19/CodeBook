@@ -6,9 +6,6 @@ import random
 import re
 import sys
 
-# Complete the encryption function below.
-
-
 def encryption(s):
     key = math.ceil(len(s)**0.5)
     encryp = []

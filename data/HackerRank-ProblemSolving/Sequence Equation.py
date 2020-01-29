@@ -6,9 +6,6 @@ import random
 import re
 import sys
 
-# Complete the permutationEquation function below.
-
-
 def permutationEquation(p):
     return [(p.index(p.index(i)+1)+1) for i in range(1, max(p)+1)]
 

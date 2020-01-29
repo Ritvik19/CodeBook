@@ -6,9 +6,6 @@ import random
 import re
 import sys
 
-# Complete the chocolateFeast function below.
-
-
 def chocolateFeast(n, c, m):
     count = n//c
     wrappers = n//c
@@ -16,7 +13,6 @@ def chocolateFeast(n, c, m):
         count += wrappers//m
         wrappers = wrappers//m + wrappers % m
     return count
-
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
