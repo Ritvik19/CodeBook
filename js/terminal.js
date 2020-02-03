@@ -43,7 +43,7 @@ $('#command').keyup(function(e) {
 });
 
 function loadCode(p, q, e) {
-    document.getElementById('title').innerHTML = p + "." + e + " - " + q;
+    document.getElementById('title').innerHTML = p + " - " + q + "." + e;
     var xhttp = new XMLHttpRequest();
     var filepath = '../data/' + p + '/' + q + '.' + e
     console.log(filepath)
