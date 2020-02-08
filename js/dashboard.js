@@ -93,6 +93,7 @@ function code() {
             console.log(dataObj)
             document.getElementById('loc').innerHTML = dataObj['loc']
             document.getElementById('num').innerHTML = dataObj['num']
+            document.getElementById('avg').innerHTML = (dataObj['loc'] / dataObj['num']).toFixed(2)
             var ctx1 = document.getElementById('code').getContext('2d');
             var myChart1 = new Chart(ctx1, {
                 type: 'horizontalBar',
