@@ -14,9 +14,10 @@ h6 {
     margin: 8px;
 }
 
-#postlist {
+#postlist,
+#featured {
     overflow-y: scroll;
-    height: 320px;
+    max-height: 320px;
 }
 
 #postlist li,

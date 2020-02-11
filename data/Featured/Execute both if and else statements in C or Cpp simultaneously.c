@@ -1,5 +1,3 @@
-// Source: GeekforGeeks: https://www.geeksforgeeks.org/execute-else-statements-cc-simultaneously
-
 #include <stdio.h>
 int main()
 {
@@ -19,7 +17,7 @@ int main()
         goto label_1;
 
     label_2:
-        printf("Geeks");
+        printf("World");
     }
     return 0;
 }
