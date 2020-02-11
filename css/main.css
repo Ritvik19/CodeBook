@@ -19,11 +19,13 @@ h6 {
     height: 320px;
 }
 
-#postlist li {
+#postlist li,
+#featured li {
     cursor: pointer;
 }
 
-#postlist li:hover {
+#postlist li:hover,
+#featured li:hover {
     background-color: var(--c2);
 }
 

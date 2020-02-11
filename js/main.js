@@ -8,11 +8,16 @@ function loadPrograms() {
             extension = dataObj['Language']
             var i = 0;
             HTMLcontent = ''
+            featuredContent = ''
             while (typeof program_name[i] !== "undefined") {
                 HTMLcontent += '<a href="/terminal/?p=' + platform[i] + '&q=' + program_name[i] + '&e=' + extension[i] + '"><li class="w3-padding-8"><span class="w3-large">' + program_name[i] + '</span><br><span>' + platform[i] + '</span></li></a>'
+                if (platform[i] == 'Featured') {
+                    featuredContent += '<a href="/terminal/?p=' + platform[i] + '&q=' + program_name[i] + '&e=' + extension[i] + '"><li class="w3-padding-8"><span class="w3-large">' + program_name[i] + '</span><br><span>' + platform[i] + '</span></li></a>'
+                }
                 i++;
             }
             document.getElementById("postlist").innerHTML += HTMLcontent;
+            document.getElementById("featured").innerHTML += featuredContent;
             document.getElementsByClassName("badge")[0].innerHTML = i;
         }
     };
