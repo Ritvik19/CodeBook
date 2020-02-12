@@ -1,3 +1,8 @@
+drawBarChart();
+drawDonutChart();
+code();
+drawHistogram();
+
 function drawBarChart() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
@@ -51,9 +56,8 @@ function drawBarChart() {
     xhttp.open("GET", "../data/ProgramCounts.json", true);
     xhttp.send();
 }
-drawBarChart();
 
-function drawPieChart() {
+function drawDonutChart() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
@@ -83,7 +87,6 @@ function drawPieChart() {
     xhttp.open("GET", "../data/ProgramLanguage.json", true);
     xhttp.send();
 }
-drawPieChart();
 
 function code() {
     var xhttp = new XMLHttpRequest();
@@ -160,7 +163,6 @@ function code() {
     xhttp.open("GET", "../data/ProgramAnalysis.json", true);
     xhttp.send();
 }
-code();
 
 function drawHistogram() {
     var xhttp = new XMLHttpRequest();
@@ -223,4 +225,3 @@ function drawHistogram() {
     xhttp.open("GET", "../data/ProgramHistogram.json", true);
     xhttp.send();
 }
-drawHistogram();
