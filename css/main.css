@@ -15,18 +15,21 @@ h6 {
 }
 
 #postlist,
-#featured {
+#featured,
+#dsalgo {
     overflow-y: scroll;
     max-height: 320px;
 }
 
 #postlist li,
-#featured li {
+#featured li,
+#dsalgo li {
     cursor: pointer;
 }
 
 #postlist li:hover,
-#featured li:hover {
+#featured li:hover,
+#dsalgo li:hover {
     background-color: var(--c2);
 }
 

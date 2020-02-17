@@ -9,15 +9,20 @@ function loadPrograms() {
             var i = 0;
             HTMLcontent = ''
             featuredContent = ''
+            algoContent = ''
             while (typeof program_name[i] !== "undefined") {
                 HTMLcontent += '<a href="/terminal/?p=' + platform[i] + '&q=' + program_name[i] + '&e=' + extension[i] + '"><li class="w3-padding-8"><span class="w3-large">' + program_name[i] + '</span><br><span>' + platform[i] + '</span></li></a>'
                 if (platform[i] == 'Featured') {
-                    featuredContent += '<a href="/terminal/?p=' + platform[i] + '&q=' + program_name[i] + '&e=' + extension[i] + '"><li class="featured w3-padding-large w3-large">' + program_name[i] + '</li></a>'
+                    featuredContent += '<a href="/terminal/?p=' + platform[i] + '&q=' + program_name[i] + '&e=' + extension[i] + '"><li class="featured w3-padding-large w3-large">' + program_name[i] + '.' + extension[i] + '</li></a>'
+                }
+                if (platform[i] == 'Algo') {
+                    featuredContent += '<a href="/terminal/?p=' + platform[i] + '&q=' + program_name[i] + '&e=' + extension[i] + '"><li class="featured w3-padding-large w3-large">' + program_name[i] + '.' + extension[i] + '</li></a>'
                 }
                 i++;
             }
             document.getElementById("postlist").innerHTML += HTMLcontent;
             document.getElementById("featured").innerHTML += featuredContent;
+            document.getElementById("dsalgo").innerHTML += algoContent;
             document.getElementsByClassName("badge")[0].innerHTML = i;
         }
     };
