@@ -16,10 +16,11 @@ function loadPrograms() {
                     featuredContent += '<a href="/terminal/?p=' + platform[i] + '&q=' + program_name[i] + '&e=' + extension[i] + '"><li class="featured w3-padding-large w3-large">' + program_name[i] + '.' + extension[i] + '</li></a>'
                 }
                 if (platform[i] == 'Algo') {
-                    featuredContent += '<a href="/terminal/?p=' + platform[i] + '&q=' + program_name[i] + '&e=' + extension[i] + '"><li class="featured w3-padding-large w3-large">' + program_name[i] + '.' + extension[i] + '</li></a>'
+                    algoContent += '<a href="/terminal/?p=' + platform[i] + '&q=' + program_name[i] + '&e=' + extension[i] + '"><li class="featured w3-padding-large w3-large"><span>' + program_name[i] + '.' + extension[i] + '</span></li></a>'
                 }
                 i++;
             }
+            console.log(algoContent)
             document.getElementById("postlist").innerHTML += HTMLcontent;
             document.getElementById("featured").innerHTML += featuredContent;
             document.getElementById("dsalgo").innerHTML += algoContent;
