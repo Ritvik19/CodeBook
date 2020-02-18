@@ -1,11 +1,13 @@
 class Node: 
     def __init__(self, data): 
         self.data = data
-        self.next = None 
+        self.next = None
+        self.prev = None
 
-class LinkedList: 
+class DoublyLinkedList: 
     def __init__(self):  
         self.head = None
+        self.tail = None
 
     def length(self):
         current = self.head
@@ -17,28 +19,39 @@ class LinkedList:
 
     def traverse(self):
         current = self.head
+        print('head', end=" <-> ")
         while current is not None:
-            print(current.data, end=" -> ")
+            print(current.data, end=" <-> ")
             current = current.next
-        print('end')
+        print('tail')
 
+    def reverse(self):
+        current = self.tail
+        print('tail', end=" <-> ")
+        while current is not None:
+            print(current.data, end=" <-> ")
+            current = current.prev
+        print('head')
+        
     def insertAtBeginning(self, data):
         newnode = Node(data)
         if self.length() == 0:
             self.head = newnode
+            self.tail = newnode
         else:
-            newnode.next = self. head
+            newnode.next = self.head
+            self.head.prev = newnode
             self.head = newnode
 
     def insertAtEnd(self, data):
         newnode = Node(data)
         if self.length() == 0:
             self.head = newnode
+            self.tail = newnode
         else:
-            current = self.head
-            while current.next is not None:
-                current = current.next
-            current.next = newnode
+            self.tail.next = newnode
+            newnode.prev = self.tail
+            self.tail = newnode
 
     def insertAtPos(self, pos, data):
         if pos > self.length() or pos < 0:
@@ -56,6 +69,8 @@ class LinkedList:
                     count += 1
                     current = current.next
                 newnode.next = current.next
+                newnode.prev = current
+                current.next.prev = newnode
                 current.next = newnode
 
     def deleteFromBeginning(self):
@@ -63,17 +78,14 @@ class LinkedList:
             print("The list is empty")
         else:
             self.head = self.head.next
+            self.head.prev = None
 
     def deleteFromEnd(self):
         if self.length() == 0:
             print("The list is empty")
         else:
-            currentnode = self.head
-            previousnode = self. head
-            while currentnode.next is not None:
-                previousnode = currentnode
-                currentnode = currentnode.next
-            previousnode.next = None
+            self.tail = self.tail.prev
+            self.tail.next = None
 
     def deleteAtPos(self, pos):
         count = 0
@@ -91,6 +103,7 @@ class LinkedList:
                     count += 1
                     if count == pos:
                         previousnode.next = currentnode.next
+                        currentnode.next.prev = previousnode
                         return
                     else:
                         previousnode = currentnode
@@ -100,7 +113,7 @@ class LinkedList:
         self.head = None
 
 if __name__ == '__main__':
-    linkedlist = LinkedList()
+    linkedlist = DoublyLinkedList()
     linkedlist.insertAtBeginning(3)
     linkedlist.insertAtBeginning(2)
     linkedlist.insertAtBeginning(1)
@@ -112,3 +125,4 @@ if __name__ == '__main__':
     linkedlist.deleteAtPos(3)
     print(f"Length: {linkedlist.length()}")
     linkedlist.traverse()
+    linkedlist.reverse()

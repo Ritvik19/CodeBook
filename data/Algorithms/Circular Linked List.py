@@ -1,57 +1,53 @@
 class Node: 
     def __init__(self, data): 
         self.data = data
-        self.next = None
-        self.prev = None
+        self.next = None 
 
-class LinkedList: 
+class CircularLinkedList: 
     def __init__(self):  
         self.head = None
         self.tail = None
 
     def length(self):
-        current = self.head
         count = 0
-        while current is not None:
-            count += 1
-            current = current.next
+        if self.head is not None:
+            current = self.head
+            while True:
+                current = current.next
+                count += 1
+                if (current == self.head):
+                        break
         return count
 
     def traverse(self):
-        current = self.head
-        print('head', end=" <-> ")
-        while current is not None:
-            print(current.data, end=" <-> ")
-            current = current.next
-        print('tail')
+        if self.head is not None:
+            current = self.head
+            while True:
+                print(current.data, end=" -> ")
+                current = current.next
+                if (current == self.head):
+                        break
+            print('end')
 
-    def reverse(self):
-        current = self.tail
-        print('tail', end=" <-> ")
-        while current is not None:
-            print(current.data, end=" <-> ")
-            current = current.prev
-        print('head')
-        
-    def insertAtBeginning(self, data):
+    def insertAtBeginning(self, data):        
         newnode = Node(data)
         if self.length() == 0:
             self.head = newnode
-            self.tail = newnode
+            self.tail = self.head
         else:
             newnode.next = self.head
-            self.head.prev = newnode
             self.head = newnode
+        self.tail.next = self.head
 
     def insertAtEnd(self, data):
         newnode = Node(data)
         if self.length() == 0:
             self.head = newnode
-            self.tail = newnode
+            self.tail = self.head
         else:
             self.tail.next = newnode
-            newnode.prev = self.tail
             self.tail = newnode
+        self.tail.next = self.head
 
     def insertAtPos(self, pos, data):
         if pos > self.length() or pos < 0:
@@ -69,8 +65,6 @@ class LinkedList:
                     count += 1
                     current = current.next
                 newnode.next = current.next
-                newnode.prev = current
-                current.next.prev = newnode
                 current.next = newnode
 
     def deleteFromBeginning(self):
@@ -78,14 +72,19 @@ class LinkedList:
             print("The list is empty")
         else:
             self.head = self.head.next
-            self.head.prev = None
+            self.tail.next = self.head
 
     def deleteFromEnd(self):
         if self.length() == 0:
             print("The list is empty")
         else:
-            self.tail = self.tail.prev
-            self.tail.next = None
+            currentnode = self.head
+            previousnode = self. head
+            while currentnode is not self.tail:
+                previousnode = currentnode
+                currentnode = currentnode.next
+            previousnode.next = self.head
+            self.tail = previousnode
 
     def deleteAtPos(self, pos):
         count = 0
@@ -103,7 +102,6 @@ class LinkedList:
                     count += 1
                     if count == pos:
                         previousnode.next = currentnode.next
-                        currentnode.next.prev = previousnode
                         return
                     else:
                         previousnode = currentnode
@@ -113,7 +111,7 @@ class LinkedList:
         self.head = None
 
 if __name__ == '__main__':
-    linkedlist = LinkedList()
+    linkedlist = CircularLinkedList()
     linkedlist.insertAtBeginning(3)
     linkedlist.insertAtBeginning(2)
     linkedlist.insertAtBeginning(1)
@@ -125,4 +123,3 @@ if __name__ == '__main__':
     linkedlist.deleteAtPos(3)
     print(f"Length: {linkedlist.length()}")
     linkedlist.traverse()
-    linkedlist.reverse()
