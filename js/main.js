@@ -6,7 +6,8 @@ function loadPrograms() {
             program_name = dataObj['Program']
             platform = dataObj['Category']
             extension = dataObj['Language']
-            var i = 0;
+            var i = 0,
+                algo = 0;
             HTMLcontent = ''
             featuredContent = ''
             algoContent = ''
@@ -15,7 +16,8 @@ function loadPrograms() {
                 if (platform[i] == 'Featured') {
                     featuredContent += '<a href="/terminal/?p=' + platform[i] + '&q=' + program_name[i] + '&e=' + extension[i] + '"><div class="w3-col m3"><div class="w3-center w3-margin w3-padding featured">' + program_name[i] + '.' + extension[i] + '</div></div></a>'
                 }
-                if (platform[i] == 'Algo') {
+                if (platform[i] == 'Algorithms') {
+                    algo += 1
                     algoContent += '<a href="/terminal/?p=' + platform[i] + '&q=' + program_name[i] + '&e=' + extension[i] + '"><li class="w3-padding-large w3-large"><span>' + program_name[i] + '.' + extension[i] + '</span></li></a>'
                 }
                 i++;
@@ -25,6 +27,7 @@ function loadPrograms() {
             document.getElementById("featured").innerHTML += featuredContent;
             document.getElementById("dsalgo").innerHTML += algoContent;
             document.getElementsByClassName("badge")[0].innerHTML = i;
+            document.getElementsByClassName("badge")[1].innerHTML = algo;
         }
     };
     xhttp.open("GET", "data/ProgramList.json", true);
