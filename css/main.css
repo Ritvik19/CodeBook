@@ -21,14 +21,21 @@ h6 {
     max-height: 320px;
 }
 
+.featured {
+    background-color: var(--c2);
+}
+
+#featured .featured:hover {
+    background-color: var(--c4);
+}
+
 #postlist li,
-#featured li,
+#featured .featured,
 #dsalgo li {
     cursor: pointer;
 }
 
 #postlist li:hover,
-#featured li:hover,
 #dsalgo li:hover {
     background-color: var(--c2);
 }

@@ -13,7 +13,7 @@ function loadPrograms() {
             while (typeof program_name[i] !== "undefined") {
                 HTMLcontent += '<a href="/terminal/?p=' + platform[i] + '&q=' + program_name[i] + '&e=' + extension[i] + '"><li class="w3-padding-8"><span class="w3-large">' + program_name[i] + '</span><br><span>' + platform[i] + '</span></li></a>'
                 if (platform[i] == 'Featured') {
-                    featuredContent += '<a href="/terminal/?p=' + platform[i] + '&q=' + program_name[i] + '&e=' + extension[i] + '"><li class="featured w3-padding-large w3-large">' + program_name[i] + '.' + extension[i] + '</li></a>'
+                    featuredContent += '<a href="/terminal/?p=' + platform[i] + '&q=' + program_name[i] + '&e=' + extension[i] + '"><div class="w3-col m3"><div class="w3-center w3-margin w3-padding featured">' + program_name[i] + '.' + extension[i] + '</div></div></a>'
                 }
                 if (platform[i] == 'Algo') {
                     algoContent += '<a href="/terminal/?p=' + platform[i] + '&q=' + program_name[i] + '&e=' + extension[i] + '"><li class="featured w3-padding-large w3-large"><span>' + program_name[i] + '.' + extension[i] + '</span></li></a>'
