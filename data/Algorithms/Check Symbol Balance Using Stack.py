@@ -12,19 +12,19 @@ def enablePrint():
 
 
 def checkSymbolBalance(string):
-    stack_ = Stack(len(string))
+    symbolStack = Stack(len(string))
     for s in string:
         if s in ['(', '{', '[']:
             blockPrint()
-            stack_.push(s)
+            symbolStack.push(s)
             enablePrint()
         elif s in [')', '}', ']']:
-            s_ = stack_.pop_()
+            s_ = symbolStack.pop_()
             if (s_, s) not in [('(', ')'), ('{', '}'), ('[', ']')]:
                 return False
         else:
             pass
-    return stack_.isEmpty()
+    return symbolStack.isEmpty()
 
 
 if __name__ == '__main__':
