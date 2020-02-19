@@ -4,6 +4,9 @@ class Node:
         self.next = None
         self.prev = None
 
+    def __str__(self):
+        return str(self.data)
+    
 class DoublyLinkedList: 
     def __init__(self):  
         self.head = None

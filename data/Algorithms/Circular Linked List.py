@@ -3,6 +3,9 @@ class Node:
         self.data = data
         self.next = None 
 
+    def __str__(self):
+        return str(self.data)
+    
 class CircularLinkedList: 
     def __init__(self):  
         self.head = None

@@ -1,13 +1,14 @@
-class Node: 
-    def __init__(self, data): 
+class Node:
+    def __init__(self, data):
         self.data = data
-        self.next = None 
-        
+        self.next = None
+
     def __str__(self):
         return str(self.data)
 
-class SinglyLinkedList: 
-    def __init__(self):  
+
+class SinglyLinkedList:
+    def __init__(self):
         self.head = None
 
     def length(self):
@@ -102,6 +103,20 @@ class SinglyLinkedList:
     def clear(self):
         self.head = None
 
+    def detectCycles(self):
+        fastPtr = self.head
+        slowPtr = self.head
+        while fastPtr and slowPtr:
+            fastPtr = fastPtr.next
+            if fastPtr == slowPtr:
+                return slowPtr
+            if fastPtr is None:
+                return False
+            fastPtr = fastPtr.next
+            if fastPtr == slowPtr:
+                return slowPtr
+            slowPtr = slowPtr.next
+
 if __name__ == '__main__':
     linkedlist = SinglyLinkedList()
     linkedlist.insertAtBeginning(3)
@@ -110,8 +125,10 @@ if __name__ == '__main__':
     linkedlist.insertAtEnd(5)
     linkedlist.insertAtEnd(6)
     linkedlist.insertAtPos(3, 4)
-    linkedlist.deleteFromBeginning()
-    linkedlist.deleteFromEnd()
-    linkedlist.deleteAtPos(3)
     print(f"Length: {linkedlist.length()}")
     linkedlist.traverse()
+    current = linkedlist.head
+    while current.next is not None:
+        current = current.next
+    current.next = linkedlist.head
+    print(f"Cycle: {linkedlist.detectCycles()}")

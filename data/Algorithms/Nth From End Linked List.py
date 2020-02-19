@@ -1,13 +1,13 @@
-class Node: 
-    def __init__(self, data): 
+class Node:
+    def __init__(self, data):
         self.data = data
-        self.next = None 
+        self.next = None
         
     def __str__(self):
         return str(self.data)
 
-class SinglyLinkedList: 
-    def __init__(self):  
+class SinglyLinkedList:
+    def __init__(self):
         self.head = None
 
     def length(self):
@@ -102,6 +102,20 @@ class SinglyLinkedList:
     def clear(self):
         self.head = None
 
+    def nthFromEnd(self, n):
+        if n < 0:
+            return None
+        current = self.head
+        count = 0
+        while count < n and current is not None:
+            current = current.next
+            count += 1
+        nth = self.head
+        while current.next is not None:
+            current = current.next
+            nth = nth.next
+        return nth
+
 if __name__ == '__main__':
     linkedlist = SinglyLinkedList()
     linkedlist.insertAtBeginning(3)
@@ -115,3 +129,5 @@ if __name__ == '__main__':
     linkedlist.deleteAtPos(3)
     print(f"Length: {linkedlist.length()}")
     linkedlist.traverse()
+    n = 1
+    print(f"{n}th from end: {linkedlist.nthFromEnd(n)}")
