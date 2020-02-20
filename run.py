@@ -8,6 +8,8 @@ programList = []
 count_loc = 0
 count_for = 0
 count_while = 0
+count_until = 0
+count_foreach = 0
 count_if = 0
 count_asgnmt = 0
 count_prog = 0
@@ -27,6 +29,9 @@ for folderName, subfolders, filenames in os.walk('E:/Coding/CodeBook/data/'):
                 count_asgnmt += data.count(' = ')
                 count_for += data.count('for')
                 count_while += data.count(('while'))
+                count_until += data.count('until')
+                count_foreach += data.count('foreach')
+                count_foreach += data.count('forEach')
                 count_if += data.count('if')
                 
             programList.append((fname, extension, dname))
@@ -39,7 +44,7 @@ programList['Category'].value_counts().to_json('data/ProgramCounts.json')
 print(programList['Language'].value_counts())
 programList['Language'].value_counts().to_json('data/ProgramLanguage.json')
 
-json.dump(({'loc': count_loc, 'expressions': count_asgnmt, 'for': count_for,
+json.dump(({'loc': count_loc, 'expressions': count_asgnmt, 'for': count_for, 'foreach': count_foreach, 'until': count_until,
             'while': count_while, 'decisions': count_if, 'num': count_prog}), open('data/ProgramAnalysis.json', 'w'))
 json.dump(histogram, open('data/ProgramHistogram.json', 'w'))
 os.system('surge')

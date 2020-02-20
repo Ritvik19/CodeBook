@@ -21,12 +21,21 @@ h6 {
     max-height: 320px;
 }
 
-.featured {
+.featured-container {
+    min-height: 100px;
+    position: relative;
     background-color: var(--c2);
 }
 
-#featured .featured:hover {
-    background-color: var(--c4);
+.featured {
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+#featured .featured-container:hover {
+    background-color: var(--c3);
 }
 
 #postlist li,

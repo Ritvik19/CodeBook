@@ -104,7 +104,7 @@ function code() {
                     labels: ['Expressions', 'Decisions', 'Iterations'],
                     datasets: [{
                         label: '# occurences',
-                        data: [dataObj['expressions'], dataObj['decisions'], dataObj['for'] + dataObj['while']],
+                        data: [dataObj['expressions'], dataObj['decisions'], dataObj['for'] + dataObj['while'] + dataObj['foreach'] + dataObj['until']],
                         backgroundColor: '#11174b',
                         borderColor: '#b3ddcc',
                         borderWidth: 1
@@ -144,10 +144,10 @@ function code() {
                 type: 'pie',
                 data: {
                     datasets: [{
-                        data: [dataObj['for'], dataObj['while']],
-                        backgroundColor: ["#2d5e9e", "#162065"],
+                        data: [dataObj['for'], dataObj['while'], dataObj['foreach'], dataObj['until']],
+                        backgroundColor: ["#8acdce", "#2d5e9e", "#11174b", "#1c2b7f"],
                     }],
-                    labels: ['For', 'While']
+                    labels: ['For', 'While', 'ForEach', 'Until']
                 },
                 options: {
                     legend: {
