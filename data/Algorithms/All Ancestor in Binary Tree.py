@@ -1,9 +1,16 @@
 from BinaryTree import Node
 
-def depthBinaryTree(root):
+def allAncestor(root, node):
     if root is None:
-        return 0
-    return max(depthBinaryTree(root.left), depthBinaryTree(root.right)) + 1
+        return False
+
+    if root.data == node:
+        return True
+
+    if allAncestor(root.left, node) or allAncestor(root.right, node):
+        print (root.data)
+        return True
+    return False
 
 if __name__ == "__main__":
     root = Node(27)
@@ -16,4 +23,5 @@ if __name__ == "__main__":
     root.left.left.left = Node(45)
     print("Inorder:")
     print(*root.inorderTraversal(root))
-    print(f"Depth: {depthBinaryTree(root)}")
+    print("All Ancestors of 45:")
+    allAncestor(root, 45)

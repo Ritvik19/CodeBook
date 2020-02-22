@@ -1,9 +1,14 @@
 from BinaryTree import Node
 
-def depthBinaryTree(root):
-    if root is None:
-        return 0
-    return max(depthBinaryTree(root.left), depthBinaryTree(root.right)) + 1
+def getMirror(node):
+    if node is None:
+        return
+    else:
+        getMirror(node.left)
+        getMirror(node.right)
+        temp = node.left
+        node.left = node.right
+        node.right = temp
 
 if __name__ == "__main__":
     root = Node(27)
@@ -16,4 +21,6 @@ if __name__ == "__main__":
     root.left.left.left = Node(45)
     print("Inorder:")
     print(*root.inorderTraversal(root))
-    print(f"Depth: {depthBinaryTree(root)}")
+    getMirror(root)
+    print("Inorder (Mirror):")
+    print(*root.inorderTraversal(root))

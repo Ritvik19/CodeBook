@@ -5,22 +5,6 @@ class Node:
         self.right = None
         self.data = data
 
-    def insert(self, data):
-        if self.data:
-            if data < self.data:
-                if self.left is None:
-                    self.left = Node(data)
-                else:
-                    self.left.insert(data)
-            elif data > self.data:
-                if self.right is None:
-                    self.right = Node(data)
-                else:
-                    self.right.insert(data)
-        else:
-            self.data = data
-
-
     def PrintTree(self):
         if self.left:
             self.left.PrintTree()
@@ -51,15 +35,18 @@ class Node:
             res = res + self.postorderTraversal(node.right)
             res.append(node.data)
         return res
+    
+    def __str__(self):
+        return f"{self.data}"
 
 if __name__ == "__main__":
     root = Node(27)
-    root.insert(14)
-    root.insert(35)
-    root.insert(10)
-    root.insert(19)
-    root.insert(31)
-    root.insert(42)
+    root.left = Node(14)
+    root.right = Node(35)
+    root.left.left = Node(10)
+    root.left.right = Node(19)
+    root.right.left = Node(31)
+    root.right.right = Node(42)
     print("Inorder:")
     print(*root.inorderTraversal(root))
     print("Preorder:")
