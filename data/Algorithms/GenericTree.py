@@ -1,3 +1,5 @@
+from Queue import Queue
+
 class Node():
     def __init__(self, data):
         self.data = data
@@ -43,6 +45,19 @@ def treeSum(root):
     if root is None:
         return 0
     return root.data + treeSum(root.getFirstChild()) + treeSum(root.getNextSibling())
+
+def levelOrderTraversal(root):
+    q = Queue(13)
+    q.enqueue(root)
+    traversal = []
+    while not q.isEmpty():
+        node = q.dequeue()
+        traversal.append(node.data)
+        node = node.getFirstChild()
+        while node is not None:
+            q.enqueue(node)
+            node = node.getNextSibling()
+    return traversal
     
 if __name__ == "__main__":
     root = Node(1)
@@ -66,3 +81,4 @@ if __name__ == "__main__":
     print(f"Child of root element: {childrenCount(root)}")
     print(f"Siblings of first child of root element: {siblingsCount(root.getFirstChild())}")
     print(f"Depth: {depth(root)}")
+    print(f"Level Order Traversal: {levelOrderTraversal(root)}")
