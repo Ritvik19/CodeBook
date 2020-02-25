@@ -15,13 +15,21 @@ class DeQueue():
         self.size += 1 
         
     def dequeueFront(self):
-        self.queue.pop(0)
+        e = self.queue.pop(0)
         self.size -= 1
+        return e
 
     def dequeueRear(self):
-        self.queue.pop(-1)
+        e = self.queue.pop(-1)
         self.size -= 1
-            
+        return e
+    
+    def peakRear(self):
+        return self.queue[-1]
+    
+    def peakFront(self):
+        return self.queue[0]
+    
     def display(self):
         print(*self.queue, sep=' <- ')
         
