@@ -145,7 +145,7 @@ function code() {
                 data: {
                     datasets: [{
                         data: [dataObj['for'], dataObj['while'], dataObj['foreach'], dataObj['until']],
-                        backgroundColor: ["#8acdce", "#2d5e9e", "#11174b", "#1c2b7f"],
+                        backgroundColor: ["#11174b", "#2d5e9e", "#8acdce", "#1c2b7f"],
                     }],
                     labels: ['For', 'While', 'ForEach', 'Until']
                 },
@@ -180,14 +180,14 @@ function drawHistogram() {
             }
             dataLabels.push((parseInt(n) + 1) * 10 + '+')
             var myChart = new Chart(ctx, {
-                type: 'bar',
+                type: 'line',
                 data: {
                     labels: dataLabels,
                     datasets: [{
                         label: '# Programs',
                         data: dataValues,
-                        backgroundColor: '#11174b',
-                        borderColor: '#b3ddcc',
+                        backgroundColor: 'rgba(179,221,204, 0.2)',
+                        borderColor: '#11174b',
                         borderWidth: 1
                     }]
                 },
