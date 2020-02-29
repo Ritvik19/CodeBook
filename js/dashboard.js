@@ -145,7 +145,7 @@ function code() {
                 data: {
                     datasets: [{
                         data: [dataObj['for'], dataObj['while'], dataObj['foreach'], dataObj['until']],
-                        backgroundColor: ["#11174b", "#2d5e9e", "#8acdce", "#1c2b7f"],
+                        backgroundColor: ["#2d5e9e", "#11174b", "#8acdce", "#1c2b7f"],
                     }],
                     labels: ['For', 'While', 'ForEach', 'Until']
                 },
