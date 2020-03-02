@@ -1,0 +1,4 @@
+The worst occurs in following cases:
+1) Array is already sorted in same order.
+2) Array is already sorted in reverse order.
+3) All elements are same (special case of case 1 and 2)

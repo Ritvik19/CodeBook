@@ -21,19 +21,19 @@ for folderName, subfolders, filenames in os.walk('E:/Coding/CodeBook/data/'):
         fname = '.'.join(fname)
         dname = folderName.split('/')[-1]
         if extension != 'json':
-            count_prog += 1
-            with open(f'{folderName}/{filename}') as f:
-                data = f.read()
-                histogram[len(data.split('\n'))//10] += 1
-                count_loc += len(data.split('\n'))
-                count_asgnmt += data.count(' = ')
-                count_for += data.count('for')
-                count_while += data.count(('while'))
-                count_until += data.count('until')
-                count_foreach += data.count('foreach')
-                count_foreach += data.count('forEach')
-                count_if += data.count('if')
-                
+            if extension != 'txt':
+                count_prog += 1
+                with open(f'{folderName}/{filename}') as f:
+                    data = f.read()
+                    histogram[len(data.split('\n'))//10] += 1
+                    count_loc += len(data.split('\n'))
+                    count_asgnmt += data.count(' = ')
+                    count_for += data.count('for')
+                    count_while += data.count(('while'))
+                    count_until += data.count('until')
+                    count_foreach += data.count('foreach')
+                    count_foreach += data.count('forEach')
+                    count_if += data.count('if')                
             programList.append((fname, extension, dname))
 
 programList = pd.DataFrame(programList, columns=['Program', 'Language', 'Category']).sort_values('Program').reset_index(drop=True)
