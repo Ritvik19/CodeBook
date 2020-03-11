@@ -41,9 +41,8 @@ print(len(programList))
 programList.to_json('data/ProgramList.json')
 print(programList['Category'].value_counts())
 programList['Category'].value_counts().to_json('data/ProgramCounts.json')
-print(programList['Language'].value_counts())
-programList['Language'].value_counts().to_json('data/ProgramLanguage.json')
-
+print(programList['Language'].value_counts().drop('txt'))
+programList['Language'].value_counts().drop('txt').to_json('data/ProgramLanguage.json')
 json.dump(({'loc': count_loc, 'expressions': count_asgnmt, 'for': count_for, 'foreach': count_foreach, 'until': count_until,
             'while': count_while, 'decisions': count_if, 'num': count_prog}), open('data/ProgramAnalysis.json', 'w'))
 json.dump(histogram, open('data/ProgramHistogram.json', 'w'))
