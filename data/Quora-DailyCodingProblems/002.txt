@@ -1,0 +1,17 @@
+Day 2 [2020-01-22]: Problem of the day [Asked by Microsoft]
+You are given an array of integers. Return the largest product that can be made by multiplying any 3 integers in the array.
+
+Example:
+
+Input:
+
+[-4, -4, 2, 8]
+
+Output:
+
+128
+
+Explanation:
+
+[-4, -4, 2, 8] should return 128 as the largest product can be made by multiplying -4 * -4 * 8
+= 128.
