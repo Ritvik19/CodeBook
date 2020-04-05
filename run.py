@@ -2,6 +2,10 @@ import pandas as pd
 import os, sys, json
 from collections import defaultdict
 
+for folderName, subfolders, filenames in os.walk('E:/Coding/CodeBook/tmp/'):
+    for filename in filenames:
+        os.unlink(os.path.join(folderName, filename))
+
 histogram = defaultdict(lambda : 0)
 programList = []
 

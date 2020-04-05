@@ -83,7 +83,7 @@ print()
 problems = pd.DataFrame(problems)
 print('Solved:', problems['status'].sum() ,'/' ,len(problems))
 
-with open('CodechefToDo.txt', 'w') as f:
+with open('tmp/CodechefToDo.txt', 'w') as f:
     for row in problems[problems['status'] == 0].values:
         f.write(f"{row[0]:50} {row[1]:10} {row[2]:10} {row[3]:5}\n")
         

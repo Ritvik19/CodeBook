@@ -21,3 +21,7 @@ ___
 * Codechef-ToDo.py:
     
     Creates a todo list for the unsolves practise problems on code chef 
+
+* Codechef-Parse.py:
+
+    Parses the details of a codechef problem    
