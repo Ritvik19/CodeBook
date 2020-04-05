@@ -14,8 +14,10 @@ You may directly access the codes from `data` directory or may visit the [websit
 ___
 ### Backend Add-ons
 
-#### run.py
-Commits and deploys all the changes (new problems solved)
+* run.py:
 
-#### codechef.py
-creates a todo list for the unsolves practise problems on code chef 
+    Commits and deploys all the changes (new problems solved)
+
+* Codechef-ToDo.py:
+    
+    Creates a todo list for the unsolves practise problems on code chef 
