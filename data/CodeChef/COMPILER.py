@@ -1,13 +1,22 @@
 for t in range(int(input())):
-    str = input()
-    count = bal = closed = 0
-    for s in str:
-        if s == '<':
-            bal += 1
+    arr = list(input())
+    stack = []
+    maxi = 0
+    count = 0
+    
+    for i in range(len(arr)):
+        if arr[i] == '<':
+            stack.append(arr[i])
+            
         else:
-            if bal > 0:
-                bal -=1
-                closed += 1
-                if bal == 0:
-                    count += 2*closed
-    print(count)
+            if len(stack) == 0:
+                break
+            else:
+                stack.pop()
+                count += 2
+        
+        if len(stack) == 0:
+            maxi = maxi + count
+            count = 0
+            
+    print (maxi)
