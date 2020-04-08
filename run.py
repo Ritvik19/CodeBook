@@ -2,7 +2,7 @@ import pandas as pd
 import os, sys, json
 from collections import defaultdict
 
-for folderName, subfolders, filenames in os.walk('E:/Coding/CodeBook/tmp/'):
+for folderName, subfolders, filenames in os.walk('tmp/'):
     for filename in filenames:
         os.unlink(os.path.join(folderName, filename))
 
@@ -19,7 +19,7 @@ count_asgnmt = 0
 count_prog = 0
 
 
-for folderName, subfolders, filenames in os.walk('E:/Coding/CodeBook/data/'):
+for folderName, subfolders, filenames in os.walk('data/'):
     for filename in filenames:
         *fname, extension = filename.split('.')
         fname = '.'.join(fname)
