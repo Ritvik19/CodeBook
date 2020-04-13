@@ -5,6 +5,8 @@ from tqdm.auto import tqdm
 parser = argparse.ArgumentParser(description="Codechef ToDo Organiser")
 parser.add_argument('-c', '--category', metavar='name', 
                     help='name of the category to practise', choices=['b', 'e', 'm', 'h', 'c', 'p'])
+parser.add_argument('-u', '--contest', metavar='url',
+                    help='url of the contest')
 parser.add_argument('-s', '--sort', metavar='attribute', 
                     help='sort the problems by an attribute', choices=['n', 'c', 's', 'a'])
 parser.add_argument('-r', '--reverse', action='store_true', help='sort in descending order')
@@ -32,8 +34,9 @@ elif args.category == 'c':
 elif args.category == 'p':
     url += 'extcontest'
 else:
-    print('Provide a valid practise category')
-    sys.exit()
+    if args.contest is None:
+        print('Provide a valid practise category')
+        sys.exit()
     
 if args.sort is not None:
     url += '?sort_by='
@@ -54,6 +57,9 @@ if args.sort is not None:
         url += '&sorting_order=asc'
 else:
     pass
+
+if args.contest is not None:
+    url = args.contest
 
 problems = {
     'name': [], 'code': [], 'submissions': [], 'accuracy': [], 'status': []
