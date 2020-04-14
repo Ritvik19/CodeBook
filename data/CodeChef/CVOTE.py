@@ -1,20 +1,30 @@
-n, m = map(int, input().split())
-countries = {}      #chef to country
-chefvotes = {}      #chef to vote
-countryvotes = {}    #country to vote
+N, M = map(int, input().split())
+chefCountry = {}
+chefVotes = {}
+countryVotes = {}
+for i in range(N):
+    name, country = (input().split())
+    chefCountry[name] = country
+    chefVotes[name] = 0
+    countryVotes[country] = 0
+for i in range(M):
+    a = input()
+    chefVotes[a] += 1
+    countryVotes[chefCountry[a]] += 1
+winnerChef = []
+winnerCountry = []
+maxVote = 0
+for i in countryVotes.keys():
+    maxVote = max(maxVote, countryVotes[i])
+for i in countryVotes.keys():
+    if countryVotes[i] == maxVote:
+        winnerCountry.append(i)
+print(min(winnerCountry))
+maxVote = 0
+for i in chefVotes.keys():
+    maxVote = max(maxVote, chefVotes[i])
+for i in chefVotes.keys():
+    if chefVotes[i] == maxVote:
+        winnerChef.append(i)
 
-for i in range(n):
-    chef, country = input().split()
-    countries[chef] = country
-    chefvotes[chef] = 0
-    countryvotes[country] = 0
-for i in range(m):
-    chef = input()
-    chefvotes[chef] += 1
-    countryvotes[countries[chef]] += 1
-
-chefvotes = sorted(chefvotes, key = chefvotes.get, reverse = True)
-countryvotes = sorted(countryvotes, key = countryvotes.get, reverse = True)
-
-print(countryvotes[0])
-print(chefvotes[0])
+print(min(winnerChef))
