@@ -54,4 +54,4 @@ os.system('surge')
 c = sys.argv[1]
 os.system('git add .')
 os.system(f'git commit -m "Commit {c}"')
-os.system('git push origin master')
+os.system('git push')
